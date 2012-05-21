@@ -1,0 +1,1938 @@
+groups:
+
+  Member:
+    prefix: '&f[&5Member&f]&f'
+    default: true
+    permissions:
+    
+#**************
+#****Break*****
+#**************
+    
+  Citizen:
+    prefix: '&f[&bCitizen&f]&f'
+    inheritance:
+    - Member
+    default: false
+    permissions:
+    
+#**************
+#****Break*****
+#**************
+    
+  Mod:
+    prefix: '&f[&9Mod&f]&f'
+    inheritance:
+    - Trusted
+    permissions:
+    
+#**************
+#****Break*****
+#**************
+    
+  Admin:
+    prefix: '&f[&2Admin&f]&f'
+    inheritance:
+    - Mod
+    permissions:
+    
+#**************
+#****Break*****
+#**************
+    
+  Manager:
+    prefix: '&f[&4Manager&f]&f'
+    inheritence:
+    - Master
+    permisssions:
+
+#**************
+#****Break*****
+#**************
+
+  DonatorBaseLv1:
+    prefix: 'This is not a proper group, ask an admin to contact and owner to fix this!'
+    permissions:
+    -
+  DonatorBaseLv2:
+    prefix: 'This is not a proper group, ask an admin to contact and owner to fix this!'
+    permissions:
+    -
+
+#**************
+#****Break*****
+#**************
+
+  DCit-Lv1:
+    prefix: '&f[&c$&f][&bCitizen&f]&b'
+    inheritance:
+    - Citizen
+    - DonatorBaseLv1
+    permissions:
+  DCit-Lv2:
+    prefix: '&f[&c$$&f][&bCitizen&f]&b'
+    inheritance:
+    - Citizen
+    - DonatorBaseLv2
+    permissions:
+ 
+#**************
+#****Break*****
+#**************
+    
+  DMod-Lv1:
+    prefix: '&f[&c$&f][&9Mod&f]&9'
+    inheritance:
+    - Mod
+    - DonatorBaseLv1
+    permissions:
+  DMod-Lv2:
+    prefix: '&f[&c$$&f][&9Mod&f]&9'
+    inheritance:
+    - Mod
+    - DonatorBaseLv2
+    permissions:
+
+#**************
+#****Break*****
+#**************
+
+  DAdmin-Lv1:
+    prefix: '&f[&c$&f][&2Admin&f]&2'
+    inheritance:
+    - Admin
+    - DonatorBaseLv1
+    permissions:
+  DAdmin-Lv2:
+    prefix: '&f[&c$$&f][&2Admin&f]&2'
+    inheritance:
+    - Admin
+    - DonatorBaseLv2
+    permissions:
+
+
+#**************
+#****Break*****
+#**************
+
+
+  Co-Owner:
+    prefix: '&f[&6C&2o&f-&6O&2w&6n&2e&6r&f]&2'
+    permissions:
+
+  Owner:
+    prefix: '&f[&5O&6w&4n&6e&5r&f]&4'
+    permissions:
+    - '*'
+    - -bigbrother.info
+    - hawkeye.*
+    - permissions.*
+    options:
+      message-format: '%prefix%player%suffix&6: &7%message'
+      
+#**************
+#****Break*****
+#**************
+
+worlds:
+  nether:
+    inheritance:
+    - world
+
+#**************
+#****Break*****
+#**************
+
+users:
+  shaanie:
+    group:
+    - Owner
+  kanrilla:
+    group:
+    - Co-Owner
+    prefix: '&f[&3C&4o&f-&3O&4w&3n&4e&3r&f]&4'
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  cnrlmjc:
+    group:
+    - Mod
+  fun123321:
+    group:
+    - master
+  tomxi:
+    group:
+    - Admin
+    worlds:
+      world: {}
+      Survival: {}
+      C: {}
+      F: {}
+      Spawn: {}
+      '''':
+        prefix: ''''
+      Great&f]&2:
+        prefix: '&f[&2Admin&f][&2The'
+    suffix: '&f'
+    prefix: '&f[&2Admin&f]&2'
+    options:
+      message-format: '%prefix%player%suffix: &9%message'
+  indeedo:
+    group:
+    - Co-Owner
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+    permissions:
+    - owner
+    prefix: '[&2Co&f-&2Owner&f]&4'
+  bluestorm014:
+    group:
+    - Admin
+  ryguy123321:
+    group:
+    - Mod
+  fredericsh:
+    group:
+    - Admin
+  andrewcaplinger:
+    group:
+    - Staff
+    prefix: '&f[&6Manager&f]&4'
+    worlds:
+      '&2':
+        prefix: '[&4P&f}][&4Master&f]'
+  camyb:
+    group:
+    - Co-Owner
+    prefix: '[&bC&fo-&bO&fw&bn&fe&br&f]&4'
+    worlds:
+      '&4%message':
+        options:
+          message-format: '"%prefix%player%suffix:'
+    options:
+      message-format: '%prefix%player%suffix: &6%message'
+  veryharmful:
+    group:
+    - Co-Owner
+    prefix: '&5[&5Co&4-&5Owner&5]&5'
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  delano45:
+    group:
+    - Co-Owner
+    prefix: '&9[Co-Owner]&a'
+    permissions:
+    - '*'
+  kingkempy666:
+    group:
+    - member
+  ssnnss:
+    group:
+    - DTrust-Lv2
+  nnis:
+    group:
+    - Admin
+    prefix: '[&2Admin&f]&2'
+  secretAZNmen27:
+    group:
+    - admin
+    prefix: '&f[&2MEGA_Builder&f]&2'
+  scoutyscout123:
+    group:
+    - Mod
+  nic0lad:
+    group:
+    - trusted
+  justin_ca:
+    group:
+    - trusted
+  legoq106:
+    group:
+    - citizen
+  hockey12c:
+    group:
+    - citizen
+  skylord_bryn:
+    group:
+    - mod
+  ninjaflapjack:
+    group:
+    - master
+  MekaDead:
+    group:
+    - master
+    prefix: '[&6Pimp&f]&4'
+  kelaria:
+    permissions:
+    - citizen
+    group:
+    - Mod
+  icanhascookie:
+    group:
+    - citizen
+  Crazyreplay:
+    group:
+    - citizen
+  SolidSp33d:
+    group:
+    - citizen
+  MoebiusNoir:
+    group:
+    - Co-Owner
+    prefix: '[&4C&fo-&4O&fw&4n&fe&4r&f]&b'
+  ninjanator:
+    group:
+    - trusted
+    - citizen
+  IronRoadstation:
+    group:
+    - citizen
+  craigspeirs:
+    group:
+    - Admin
+    prefix: '&f[&4A&bd&4m&bi&4n&f]&b'
+  EDAWG_310:
+    group:
+    - citizen
+  bu11etspread:
+    group:
+    - citizen
+  RePo649:
+    group:
+    - trusted
+    - citizen
+  Spudski:
+    group:
+    - admin
+  giantpiggy:
+    worlds:
+      Mod:
+        group:
+        - Mod
+      world:
+        group:
+        - admin
+        - moderator
+    group:
+    - Mod
+  Roach43210:
+    group:
+    - Mod
+  tesser7767:
+    group:
+    - citizen
+  torkelrog:
+    group:
+    - master
+  Justinh_ca:
+    worlds:
+      citizen:
+        permissions:
+        - group
+    group:
+    - DTrust-Lv1
+  ghostsoldier:
+    group:
+    - admin
+  Graphiicz:
+    group:
+    - master
+  fishernick1:
+    worlds:
+      mod:
+        permissions:
+        - group
+    group:
+    - Mod
+    - citizen
+  mreynolds93:
+    worlds:
+      admin:
+        permissions:
+        - group
+    group:
+    - admin
+    permissions:
+    - '''*'''
+    - '*'
+  teaandb1scu1ts:
+    group:
+    - Master
+  zekram:
+    group:
+    - trusted
+    - citizen
+    prefix: '&f[&6Trusted&f]&6'
+  AnthonyPRule:
+    group:
+    - Mod
+  Ian_gunz_69:
+    group:
+    - Mod
+  JfnVoorhess:
+    group:
+    - citizen
+  ZingerMike:
+    group:
+    - citizen
+  zues54:
+    group:
+    - Mod
+  FAR_KING_HeLl:
+    group:
+    - citizen
+  M0j00:
+    group:
+    - citizen
+  Scooter0414:
+    group:
+    - Mod
+    - citizen
+  Dash70:
+    group:
+    - citizen
+  XAXELSTEELX:
+    group:
+    - trusted
+  ferret189:
+    group:
+    - Master
+    prefix: '&f[&4Fe&6rr&9et&2Ma&cst&1er&f]&5'
+  XxDEVASTATERxX:
+    group:
+    - citizen
+  Tri343:
+    group:
+    - citizen
+  NeonPen:
+    group:
+    - citizen
+  cazarxx:
+    group:
+    - trusted
+  qwertblobqwert:
+    group:
+    - Trusted
+    permissions:
+    - mobdisguise.*
+    - essentials.gamemode
+  sportskid:
+    group:
+    - citizen
+  Sportskid28:
+    group:
+    - citizen
+  lolgonewrong:
+    group:
+    - Trusted
+  Silent_Swordsmen:
+    group:
+    - citizen
+  Silent_Swordsman:
+    group:
+    - trusted
+  TrickMyWarthog:
+    group:
+    - Mod
+  punkrockers64:
+    group:
+    - Mod
+  freemanbeast101:
+    group:
+    - citizen
+  ikereb:
+    group:
+    - Admin
+    permissions:
+    - mobdisguise.*
+    prefix: '[&2Admin&f]&2'
+  kingkempey666:
+    group:
+    - citizen
+  simibroesel13:
+    group:
+    - DTrust-Lv1
+  coolster1001:
+    group:
+    - citizen
+  JarredSanjurjo:
+    group:
+    - Citizen
+  Sir_McMuffins:
+    group:
+    - citizen
+  Kaval:
+    group:
+    - master
+    prefix: '[&4P&v][&4Master&v]&4'
+  Kingphilip42:
+    group:
+    - admin
+  Female_Creeper:
+    group:
+    - trusted
+  pointlessname2:
+    group:
+    - citizen
+  andy_macc:
+    group:
+    - admin
+    prefix: '&f[&6Camera&f]&4'
+  Sarge967:
+    group:
+    - Trusted
+  ApacheBlitz:
+    group:
+    - master
+  rylz16:
+    group:
+    - Citizen
+  8bitben:
+    group:
+    - master
+  Rileyisfat:
+    group:
+    - citizen
+  Tagara:
+    group:
+    - Mod
+  AndrewBryer:
+    group:
+    - citizen
+  Starking2001:
+    group:
+    - citizen
+  veryharmfun:
+    prefix: '&l'
+  CrypticMech:
+    group:
+    - trusted
+  goldhearts:
+    group:
+    - citizen
+  gordencheese:
+    group:
+    - citizen
+  gordonacheese:
+    group:
+    - citizen
+  sparkyjames:
+    group:
+    - citizen
+  iToastMan:
+    group:
+    - citizen
+  PapaSmurff:
+    group:
+    - citizen
+  aroguitarman:
+    group:
+    - citizen
+  _Legacy_:
+    group:
+    - citizen
+  Aodhan1:
+    group:
+    - trusted
+  Andy0079:
+    group:
+    - citizen
+  Ninjaboy8998:
+    group:
+    - citizen
+  pplzsayheey:
+    group:
+    - citizen
+  nigel0510:
+    group:
+    - citizen
+  captinruin:
+    group:
+    - Trusted
+  Jeffrad1000:
+    group:
+    - Trusted
+  Anithermo:
+    group:
+    - Mod
+  RubberDonkey:
+    prefix: '[&2MreyAlt&v]&2'
+  Xuelo:
+    prefix: '[&2MreyAlt&v]&2'
+  FireNinja44:
+    prefix: '[&2MreyAlt&v]&2'
+  Xreaper500:
+    group:
+    - citizen
+  Faux_Destin:
+    group:
+    - trusted
+  morewhit9:
+    group:
+    - citizen
+  Khaos209:
+    group:
+    - Trusted
+  19JayDawg98:
+    group:
+    - citizen
+  b3dog1:
+    group:
+    - citizen
+  olliecore237:
+    group:
+    - Trusted
+  TheFoxFurry:
+    group:
+    - citizen
+  jordanhamm:
+    group:
+    - citizen
+  jsm2002:
+    group:
+    - Trusted
+    permissions:
+    - worldedit.liquids
+  benbaxter:
+    group:
+    - citizen
+  bebbexter:
+    group:
+    - citizen
+  BenBexter:
+    group:
+    - citizen
+  JonasE99:
+    group:
+    - citizen
+  kamil2124:
+    group:
+    - citizen
+  Alphaman:
+    group:
+    - citizen
+  Proman249:
+    group:
+    - Trusted
+  SkyLoftian_Link:
+    group:
+    - citizen
+  wolfbane178:
+    group:
+    - Trusted
+  alex963candy:
+    group:
+    - citizen
+  oxiDoMe_sHoTxo:
+    group:
+    - Trusted
+  flamedragon3952:
+    group:
+    - citizen
+  BlockBadger42:
+    group:
+    - Trusted
+  Aarlaya:
+    group:
+    - citizen
+  Flex654:
+    group:
+    - citizen
+  Eth5001:
+    group:
+    - citizen
+  zimzam97:
+    group:
+    - citizen
+  menibe02:
+    group:
+    - citizen
+  pharmanillo622:
+    group:
+    - Trusted
+  morey313:
+    group:
+    - citizen
+  artwaserver:
+    group:
+    - citizen
+  Jake1997Jake1997:
+    group:
+    - citizen
+  adamj199:
+    group:
+    - DCit-Lv1
+  NeveLaughery:
+    group:
+    - citizen
+  eggplantbird557:
+    group:
+    - citizen
+  bulldog1784:
+    group:
+    - citizen
+  hoskernator:
+    group:
+    - Citizen
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Wwolf557:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+    group:
+    - Citizen
+  markiecraft:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  calli13:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+    group:
+    - Citizen
+  ryanmachan:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  tentacha1234:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  vengefulchao:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  das_Hand:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Totenkopf42:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  PopCrank:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  TENZIN_ROCKS:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  jason0123456789:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  iheartnyan:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  TheBurnerGuy:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+    group:
+    - Citizen
+  H0ly0range:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  acf99oc:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  vencenity:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  kitkat8967:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Godzilla603:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  cotycarlson:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+    group:
+    - Citizen
+  JDMDrift:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+    group:
+    - Citizen
+  stianminecraft:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  deadwoodluke:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  madden2399:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  22we:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  connor7:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  crazypeanuts:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  booscoos1020:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  xXDeWINskyXx:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Xx_Marvi_xX:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Wolfi15:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  SS3Pikachu:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  DerButterbrotman:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  irreality:
+    group:
+    - Master
+  natefili:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Trickster1177:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  _TehMan_:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  gregor128:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  eelong09:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  jammyjamjamiee:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+    group:
+    - Citizen
+  joey9801:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+    group:
+    - Citizen
+  new_haircut:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Dan_The_Man101:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  CospiracyQuinn:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  stef8799:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  loekieje13:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  green_endermen:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Candlepup:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  minecrafterz1:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+    group:
+    - Citizen
+  webby484:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  SomeOtherGuy208:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  barnboy93:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+    group:
+    - Trusted
+  Brennan97:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  jaxfrank:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  CabGamer1:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  backporch:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+    group:
+    - Citizen
+  BlahNah:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  FenixArrow:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  chiefrocket3:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Neosacrifice:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  W1Z_KH4L1F4:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  7r3ak:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  AgentBoo9:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  zubenelgenubi:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  NomFRENCHTOAST:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+    group:
+    - Citizen
+  DaKriz:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Aerrowflex:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  mariussschenk:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  philip161:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Lyroks:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  guimauve2000:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  MajFox112:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  hannah_Rocks:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Queen_Lulu:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  _Jefey_:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  mutzee:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  taz007:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Shafwan:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  therabbi345:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  benhawkclaw:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  lilandypandy:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Acidichustlerz:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  npadger:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Hoopi2:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  TyroneBiggins69:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  craigspiers:
+    group:
+    - Admin
+  tugetheermine:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Josh_Meister101:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+    group:
+    - DTrust-Lv1
+  The_Karkki:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  DennXY:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  hank424f:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+    group:
+    - Citizen
+  xmscmc:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+    group:
+    - Trusted
+  Defractor:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  jmwddawg:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Infinity_Knight:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Whit3boi22:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Lachlan12345:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  superTonylogin:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  CGDagger:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  SinxCross:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Zanakan:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  bell4586:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  dts888:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+    group:
+    - Trusted
+  PrenaX:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  CaptainSausage:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Kaspion:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Bearguy99:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Super_Irish:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  mcbp5:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  davidf36:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  kirby_dude:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+    group:
+    - Citizen
+  gooseguy97:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  tomkan447:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  KingMidas99:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  brandonspark:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Qballman:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+    group:
+    - Citizen
+  karilla:
+    group:
+    - Co-Owner
+  DuckySupreme:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  ridamu:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  frdrake:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  frrachel:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Kikuta_Tomasu:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  JanisxD:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  ViolaSoderlund:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Pawelking:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  TheZnarf96:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Jakeboy4:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  BlzProdigy:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  jonasxy:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  FH99:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  rushhour223:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  x_Nikzilla:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Stoplesses:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  Thatguy2000:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+    group:
+    - Citizen
+  levielm:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  tsrock5000:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  NobleKnight:
+    worlds:
+      world_nether:
+        group:
+        - Citizen
+      world:
+        group:
+        - Citizen
+  '123e180':
+    group:
+    - Trusted
+  ilovecurtins:
+    group:
+    - Trusted
+  FeArLeSs_0117:
+    group:
+    - Citizen
+  kingreenbear:
+    group:
+    - Citizen
+  KINGgreenbear:
+    group:
+    - Citizen
+  slongman2:
+    group:
+    - Citizen
+  sheesh17:
+    group:
+    - Citizen
+  skeletorman:
+    group:
+    - Citizen
+  Skelatorman:
+    group:
+    - Citizen
+  omnititan:
+    prefix: '[&dServer&f]&4'
+    group:
+    - Owner
+  fraser_1514:
+    group:
+    - Citizen
+  ilikebluecrayrons:
+    group:
+    - Citizen
+  funi1:
+    group:
+    - Citizen
+  Ilikebluecrayons:
+    group:
+    - Citizen
+  _DerIreD_:
+    group:
+    - Citizen
+  daafderaaf:
+    group:
+    - Citizen
+  anitermo:
+    group:
+    - Admin
+  J0nas1:
+    group:
+    - Citizen
+  devilthing117:
+    group:
+    - Trusted
+  lucasfly:
+    group:
+    - Citizen
+  BuckDen:
+    group:
+    - Co-Owner
+    prefix: '&4[Nazi-Leader]&6'
+  lorben37:
+    group:
+    - Citizen
+  lordben37:
+    group:
+    - Citizen
+  gazoo3:
+    group:
+    - Citizen
+  DIAMONDS0927:
+    group:
+    - Citizen
+  zac900:
+    permissions:
+    - citizen
+  zac9000:
+    permissions:
+    - citizen
+    group:
+    - Citizen
+    prefix: '&f[&bCitizen&f]&b'
+  Evex66:
+    group:
+    - Citizen
+  minerboy444:
+    options:
+      group: citizen
+    group:
+    - Citizen
+  mute_eye:
+    group:
+    - Citizen
+  andrecaplinger:
+    prefix: '&f[&6Manager&f]&4'
+  coolgut_321:
+    group:
+    - Citizen
+  CoolGuy_321:
+    group:
+    - Citizen
+  remotepaul:
+    group:
+    - Citizen
+  RazorSteam:
+    group:
+    - Citizen
+  HOWLSUN:
+    group:
+    - Citizen
+  dave121215:
+    group:
+    - Citizen
+  Buttchin112:
+    group:
+    - Citizen
+  magui43212:
+    group:
+    - Citizen
+  RyanTartaglia:
+    group:
+    - Citizen
+  Honey13579:
+    group:
+    - Citizen
+  rooses:
+    group:
+    - Citizen
