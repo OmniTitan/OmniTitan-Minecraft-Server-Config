@@ -5,6 +5,21 @@ groups:
     default: true
     permissions:
     
+# World Acess Perms
+    - multiverse.access.F
+    - multiverse.access.world
+    - multiverse.access.world_nether
+    - multiverse.access.world_the_end
+
+# Basic Command Perms
+    - essentials.tpa
+    - essentials.tpaccept
+    - essentials.tpadeny
+    - essentials.tptoggle
+    
+# Kit Perms
+    - essentials.kit
+    
 #**************
 #****Break*****
 #**************
@@ -15,6 +30,13 @@ groups:
     - Member
     default: false
     permissions:
+    
+# World Access Perms
+    - multiverse.access.skylands
+
+# Basic Command Perms
+    - essentials.tp
+    - essentials.
     
 #**************
 #****Break*****
