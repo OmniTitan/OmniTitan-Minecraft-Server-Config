@@ -535,9 +535,9 @@ users:
   hoskernator:
     group:
     - Citizen
-  '123e180':
+  123e180:
     group:
-    - Trusted
+    - Citizen
   ilovecurtins:
     group:
     - Trusted
