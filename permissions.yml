@@ -149,15 +149,7 @@ users:
     - Owner
   kanrilla:
     group:
-    - Co-Owner
-    prefix: '&f[&3C&4o&f-&3O&4w&3n&4e&3r&f]&4'
-    worlds:
-      world_nether:
-        group:
-        - Citizen
-      world:
-        group:
-        - Citizen
+    - Manager
   cnrlmjc:
     group:
     - Mod
