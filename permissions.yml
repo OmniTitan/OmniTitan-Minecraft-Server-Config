@@ -45,7 +45,7 @@ groups:
   Mod:
     prefix: '&f[&9Mod&f]&f'
     inheritance:
-    - Trusted
+    - Citizen
     permissions:
     
 #**************
@@ -65,7 +65,7 @@ groups:
   Manager:
     prefix: '&f[&4Manager&f]&f'
     inheritence:
-    - Master
+    - Admin
     permisssions:
 
 #**************
@@ -177,37 +177,13 @@ users:
     - Mod
   fun123321:
     group:
-    - master
+    - Admin
   tomxi:
     group:
     - Admin
-    worlds:
-      world: {}
-      Survival: {}
-      C: {}
-      F: {}
-      Spawn: {}
-      '''':
-        prefix: ''''
-      Great&f]&2:
-        prefix: '&f[&2Admin&f][&2The'
-    suffix: '&f'
-    prefix: '&f[&2Admin&f]&2'
-    options:
-      message-format: '%prefix%player%suffix: &9%message'
   indeedo:
     group:
-    - Co-Owner
-    worlds:
-      world_nether:
-        group:
-        - Citizen
-      world:
-        group:
-        - Citizen
-    permissions:
-    - owner
-    prefix: '[&2Co&f-&2Owner&f]&4'
+    - Manager
   bluestorm014:
     group:
     - Admin
@@ -219,61 +195,38 @@ users:
     - Admin
   andrewcaplinger:
     group:
-    - Staff
-    prefix: '&f[&6Manager&f]&4'
-    worlds:
-      '&2':
-        prefix: '[&4P&f}][&4Master&f]'
+    - Manager
   camyb:
     group:
     - Co-Owner
     prefix: '[&bC&fo-&bO&fw&bn&fe&br&f]&4'
-    worlds:
-      '&4%message':
-        options:
-          message-format: '"%prefix%player%suffix:'
     options:
       message-format: '%prefix%player%suffix: &6%message'
   veryharmful:
     group:
-    - Co-Owner
-    prefix: '&5[&5Co&4-&5Owner&5]&5'
-    worlds:
-      world_nether:
-        group:
-        - Citizen
-      world:
-        group:
-        - Citizen
+    - manager
   delano45:
     group:
-    - Co-Owner
+    - Manager
     prefix: '&9[Co-Owner]&a'
-    permissions:
-    - '*'
-  kingkempy666:
-    group:
-    - member
   ssnnss:
     group:
-    - DTrust-Lv2
+    - citizen
   nnis:
     group:
     - Admin
-    prefix: '[&2Admin&f]&2'
   secretAZNmen27:
     group:
     - admin
-    prefix: '&f[&2MEGA_Builder&f]&2'
   scoutyscout123:
     group:
     - Mod
   nic0lad:
     group:
-    - trusted
+    - citizen
   justin_ca:
     group:
-    - trusted
+    - citizen
   legoq106:
     group:
     - citizen
@@ -285,16 +238,13 @@ users:
     - mod
   ninjaflapjack:
     group:
-    - master
+    - Admin
   MekaDead:
     group:
-    - master
-    prefix: '[&6Pimp&f]&4'
+    - Admin
   kelaria:
-    permissions:
-    - citizen
     group:
-    - Mod
+    - Citizen
   icanhascookie:
     group:
     - citizen
@@ -306,11 +256,9 @@ users:
     - citizen
   MoebiusNoir:
     group:
-    - Co-Owner
-    prefix: '[&4C&fo-&4O&fw&4n&fe&4r&f]&b'
+    - Manager
   ninjanator:
     group:
-    - trusted
     - citizen
   IronRoadstation:
     group:
@@ -327,57 +275,32 @@ users:
     - citizen
   RePo649:
     group:
-    - trusted
     - citizen
   Spudski:
     group:
     - admin
-  giantpiggy:
-    worlds:
-      Mod:
-        group:
-        - Mod
-      world:
-        group:
-        - admin
-        - moderator
-    group:
-    - Mod
   Roach43210:
     group:
-    - Mod
+    - Citizen
   tesser7767:
     group:
     - citizen
   torkelrog:
     group:
-    - master
+    - Admin
   Justinh_ca:
-    worlds:
-      citizen:
-        permissions:
-        - group
     group:
-    - DTrust-Lv1
+    - Citizen
   ghostsoldier:
     group:
     - admin
   Graphiicz:
     group:
-    - master
+    - Admin
   fishernick1:
-    worlds:
-      mod:
-        permissions:
-        - group
     group:
-    - Mod
     - citizen
   mreynolds93:
-    worlds:
-      admin:
-        permissions:
-        - group
     group:
     - admin
     permissions:
