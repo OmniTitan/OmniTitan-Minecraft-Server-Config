@@ -3,3 +3,154 @@
 {\colortbl;\red255\green255\blue255;}
 \paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
 }
+
+
+
+
+/god   [player] 	Gives a player invincibility.
+/ungod 	[player] 	Remove a player's invincibility.
+/heal 	[player] 	Heals a player to full health.
+/slay 	[player] 	Slays a player.
+/stack
+
+/;
+
+		Stack items in your inventory into piles up to the max stack size for the item. Unstackable items like signs will be left alone unless the the user has the worldguard.stack.illegitimate permission.
+/locate 	[player] 	Points your compass towards a player.
+Emergency commands
+/stopfire 	[world] 	Stops fire spread instantly for your current world. This is a temporary toggle that will be disabled on server restart. Players who join will be notified when fire spread is disabled.
+/allowfire 	[world] 	Disables the toggle status of /stopfire.
+/stoplag 	[world] 	Stops all intensive server processes such as water and lava flow, redstone propagation, fire, TNT detonation, mob spawning, and other similar events. This is a temporary global toggle that will be disabled on server restart. Players who join will be notified when this mode is on. (Note: As of 5.2, the disabling of TNT explosion is not effective. It works much better in developmental versions.)
+/stoplag -c 	[world] 	Disables the toggle status of /stoplag
+/worldguard flushstates 	[player] 	Flush any data stored in the state manager that tracks player location for the entry, exit, greeting and farewell flags. Use this if someone is stuck in an exit deny region (or outside an entry deny one) after the flag or region has been removed.
+WorldGuard commands
+/worldguard version 		Prints the current WorldGuard version.
+/worldguard reload 		Reloads WorldGuard's configuration files.
+/worldguard report 	[-p] 	Writes a report of all WorldGuard settings and basic information about the current running server to a file in the WorldGuard plugin folder.
+#World edit now
+Command   Parameters 	Support 	Description
+//limit 	<limit> 	Bukkit.png Sp.png 	Set a maximum number of blocks to change at most for all operations. This only affects yourself. Use this to prevent catastrophic accidents. This command will not override the limit in the configuration if it is set.
+History
+//undo 	[num-steps] 	Bukkit.png Sp.png 	Undo your last action.
+//redo 	[num-steps] 	Bukkit.png Sp.png 	Redo your last (undone) action. This command replays back history and does not repeat the command.
+/clearhistory 		Bukkit.png Sp.png 	Clear your history.
+Selection
+//wand 		Bukkit.png Sp.png 	Gives you the "edit wand" (by default, a wooden axe). Left click with this tool to select position 1 and right click to selection position 2.
+/toggleeditwand 		Bukkit.png Sp.png 	Toggles the edit wand selection mode, allowing you to use the edit wand item normally.
+//sel 	<cuboid|extend|poly|ellipsoid|sphere|cyl> 	Bukkit.png Sp.png 	Choose the region shape to use for selections.
+//pos1 		Bukkit.png Sp.png 	Set selection position #1 to the block above the one that you are standing on.
+//pos2 		Bukkit.png Sp.png 	Set selection position #2 to the block above the one that you are standing on.
+//hpos1 		Bukkit.png Sp.png 	Set selection position #1 to the block that you are looking at.
+//hpos2 		Bukkit.png Sp.png 	Set selection position #2 to the block that you are looking at.
+//chunk 		Bukkit.png Sp.png 	Select the chunk that you are within for your selection.
+//expand 	<amount> 	Bukkit.png Sp.png 	Expands the selection in the direction that you are looking.
+//expand 	<amount> <direction> 	Bukkit.png Sp.png 	Expands the selection in the specified direction (north, east, south, west, up, down).
+//expand 	<amount> <reverse-amount> [direction] 	Bukkit.png Sp.png 	Expands the selection in two directions at once.
+//expand 	vert 	Bukkit.png Sp.png 	Expands the selection to include sky to bedrock.
+//contract 	<amount> 	Bukkit.png Sp.png 	Contracts the selection in the direction that you are looking towards.
+//contract 	<amount> [direction] 	Bukkit.png Sp.png 	Contracts the selection in the specified direction (north, east, south, west, up, down).
+//contract 	<amount> <reverse-amount> [direction] 	Bukkit.png Sp.png 	Contracts the selection in two directions at once.
+//outset 	[-hv] <amount> 	Bukkit.png Sp.png 	Outset the selection in every direction.
+//inset 	[-hv] <amount> 	Bukkit.png Sp.png 	Inset the selection in every direction.
+//shift 	<amount> [direction] 	Bukkit.png Sp.png 	Moves the selection region. It does not move the selection's contents.
+//size 		Bukkit.png Sp.png 	Get the size of selected region.
+//count 	<block> 	Bukkit.png Sp.png 	Count the number of blocks in the region.
+//distr 	[-c] 	Bukkit.png Sp.png 	Get the block distribution in the selection.
+Region operations
+//set 	<block> 	Bukkit.png Sp.png 	Set all blocks inside the selection region to a specified block.
+//replace 	<to-block> 	Bukkit.png Sp.png 	Replace all non-air blocks blocks inside the region.
+//replace 	<from-block> <to-block> 	Bukkit.png Sp.png 	Replace all blocks of the specified block(s) with another block inside the region.
+//overlay 	<block> 	Bukkit.png Sp.png 	Place a block on top of blocks inside the region.
+//walls 	<block> 	Bukkit.png Sp.png 	Build the walls of the region (not including ceiling and floor).
+//outline 	<block> 	Bukkit.png Sp.png 	Build walls, floor, and ceiling.
+//smooth 	[iterations] 	Bukkit.png Sp.png 	Smooth the selection's heightmap.
+//regen 		Bukkit.png 	Regenerate the selection region.
+//move 	[count] [direction] [leave-id] 	Bukkit.png Sp.png 	Move the selection's contents. A block can be specified to fill in the left over area.
+//stack 	[count] [direction] 	Bukkit.png Sp.png 	Stacks the selection.
+Clipboard
+//copy 		Bukkit.png Sp.png 	Copies the currently selected region. Be aware that it stores your position relative to the selection when copying.
+//cut 		Bukkit.png Sp.png 	Cuts the currently selected region.
+//paste 	[-ao] [-a] 	Bukkit.png Sp.png 	Pastes the clipboard. If you paste with -a, air blocks are being ignored.
+//rotate 	<angle-in-degrees> 	Bukkit.png Sp.png 	Rotate the clipboard.
+//flip 	[dir] 	Bukkit.png Sp.png 	Flip the clipboard.
+//schematic or //schem 	save <format> <filename> 	Bukkit.png Sp.png 	Save clipboard to .schematic. (mcedit is currently the only format)
+//schematic or //schem 	load <format> <filename> 	Bukkit.png Sp.png 	Load .schematic to clipboard.
+//schematic or //schem 	list 	Bukkit.png Sp.png 	List all available schematics.
+//schematic or schem 	formats 	Bukkit.png Sp.png 	Display available schematic formats.
+/clearclipboard 		Bukkit.png Sp.png 	Clear your clipboard.
+Generation
+//hcyl 	<block> <radius> [height] 	Bukkit.png Sp.png 	Create a vertical hollow cylinder.
+//cyl 	<block> <radius> [height] 	Bukkit.png Sp.png 	Create a vertical cylinder.
+//sphere 	<block> <radius> [raised?] 	Bukkit.png Sp.png 	Create a sphere.
+//hsphere 	<block> <radius> [raised?] 	Bukkit.png Sp.png 	Create a hollow sphere.
+/forestgen 	[size] [type] [density] 	Bukkit.png Sp.png 	Make a forest.
+/pumpkins 	[size] 	Bukkit.png Sp.png 	Make a pumpkin forest
+Utilities
+/toggleplace 		Bukkit.png Sp.png 	Toggle between using pos #1 or your current position.
+//fill 	<block> <radius> [depth] 	Bukkit.png Sp.png 	Fill a hole.
+//fillr 	<block> <radius> 	Bukkit.png Sp.png 	Fill a hole fully recursively.
+//drain 	<radius> 	Bukkit.png Sp.png 	Drain nearby water/lava pools.
+/fixwater 	<radius> 	Bukkit.png Sp.png 	Level nearby pools of water.
+/fixlava 	<radius> 	Bukkit.png Sp.png 	Level nearby pools of lava.
+/removeabove 	[size] [height] 	Bukkit.png Sp.png 	Remove blocks above your head.
+/removebelow 	[size] [height] 	Bukkit.png Sp.png 	Remove blocks below your feet.
+/replacenear 	<size> <from-id> <to-id> 	Bukkit.png Sp.png 	Replace all existing blocks nearby.
+/removenear 	[block] [size] 	Bukkit.png Sp.png 	Remove blocks near you.
+/snow 	[radius] 	Bukkit.png Sp.png 	Simulate snow cover.
+/thaw 	[radius] 	Bukkit.png Sp.png 	Unthaw/remove snow.
+//ex 	[size] 	Bukkit.png Sp.png 	Extinguish fires.
+/butcher 	[radius] 	Bukkit.png Sp.png 	Kill nearby mobs.
+/remove 	<type> <radius> 	Bukkit.png 	Remove nearby entities. Type can be "items" for loose items/drops, arrows, boats, minecarts, tnt, or xp.
+Chunk tools
+/chunkinfo 		Bukkit.png Sp.png 	Get the filename of the chunk that you are in.
+/listchunks 		Bukkit.png Sp.png 	Print a list of used chunks.
+/delchunks 		Bukkit.png Sp.png 	Generate a shell script to delete chunks.
+Super pickaxe
+// 		Bukkit.png Sp.png 	Toggle the super pick axe.
+/sp single 		Bukkit.png Sp.png 	Switch to single block super pickaxe mode.
+/sp area 	<range> 	Bukkit.png Sp.png 	Switch to area super pickaxe mode.
+/sp recur 	<range> 	Bukkit.png Sp.png 	Switch to recursive super pickaxe mode.
+Tools
+/none 		Bukkit.png Sp.png 	Switch to no tool.
+/info 		Bukkit.png Sp.png 	Switch to the info tool.
+/tree 	[type] 	Bukkit.png 	Switch to the tree tool. Available types [tree, regular, big, bigtree, redwood, sequoia, tallredwood, tallsequoia, birch, white, whitebark, pine, randredwood, randomredwood, anyredwood, rand, random]
+//repl 	<block> 	Bukkit.png Sp.png 	Switch to the block replacer tool.
+//cycler 		Bukkit.png Sp.png 	Block data cycler tool.
+Brushes
+/brush sphere 	[-h] <type> <radius> 	Bukkit.png Sp.png 	Switch to the sphere brush tool.
+/brush cylinder 	[-h] <type> <radius> [height] 	Bukkit.png Sp.png 	Switch to the cylinder brush tool.
+/brush clipboard 		Bukkit.png Sp.png 	Switch to the clipboard tool.
+/brush smooth 	<radius> [iterations] 	Bukkit.png Sp.png 	Smooth the region.
+/size 	<size> 	Bukkit.png Sp.png 	Change the size of the current brushes
+//mat 	<mat> 	Bukkit.png Sp.png 	Change the material used by your current brush.
+//mask 		Bukkit.png Sp.png 	Clear the mask
+//mask 	<mask> 	Bukkit.png Sp.png 	Set a mask
+Getting around
+/unstuck 		Bukkit.png Sp.png 	Go up to the first free spot.
+/ascend 		Bukkit.png Sp.png 	Go up one level.
+/descend 		Bukkit.png Sp.png 	Go down one level.
+/ceil 	[clearance] 	Bukkit.png Sp.png 	Get to the ceiling.
+/thru 		Bukkit.png Sp.png 	Go through the wall that you are looking at.
+/jumpto 		Bukkit.png Sp.png 	Jump to the block that you are looking at.
+/up 	[distance] 	Bukkit.png Sp.png 	Go up some distance.
+Snapshots
+//restore 	[snapshot] 	Bukkit.png Sp.png 	Restore a particular snapshot.
+//snap use 	<snapshot> 	Bukkit.png Sp.png 	Use a particular snapshot.
+//snap list 	[num] 	Bukkit.png Sp.png 	List the 5 newest snapshots.
+//snap before 	<date> 	Bukkit.png Sp.png 	Find the first snapshot before the given date.
+//snap after 	<date> 	Bukkit.png Sp.png 	Find the first snapshot after the given date.
+Scripting
+/cs 	<script> [args...] 	Bukkit.png Sp.png 	Executes a script.
+/.s 	[args...] 	Bukkit.png Sp.png 	Re-executes last script with new arguments.
+/<script>.js 	[args...] 	Bukkit.png Sp.png 	Executes a JS script.
+General commands
+/search 	<item> 	Bukkit.png Sp.png 	Search for an item by its name.
+//worldedit reload 		Bukkit.png Sp.png 	Reloads WorldEdit's configuration.
+//worldedit version 		Bukkit.png Sp.png 	Gets WorldEdit's version.
+//worldedit tz 		Bukkit.png Sp.png 	Set your timezone. This is temporary.
+Biomes
+/biome 		Bukkit.png Sp.png 	Get the biometype you are standing in.
+/biomelist 		Bukkit.png Sp.png 	List the available biome types
+//setbiome 	[-p] <biome type> 	Bukkit.png Sp.png 	Set the selected area to the specified biome type.
+
+The -p flag changes the block (column) you are standing in. 
