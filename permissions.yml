@@ -11,7 +11,7 @@ groups:
     - multiverse.access.world_nether
     - multiverse.access.world_the_end
 
-# Basic Command Perms
+# Essential Command Perms
     - essentials.tpa
     - essentials.tpaccept
     - essentials.tpadeny
@@ -25,6 +25,9 @@ groups:
     - essentials.motd
     - essentials.msg
     - essentials.rules
+    - essentials.suicide
+    - essentials.ban.notify
+    - essentials.clearinventory
     
 # Kit Perms
     - essentials.kit
@@ -57,6 +60,8 @@ groups:
     - essentials.msg.magic
     - essentials.msg.url
     - essentials.realname
+    - essentials.seen
+    - essentials.seen.banreason
     
 #**************
 #****Break*****
@@ -79,7 +84,9 @@ groups:
     - essentials.time.set
     - essentials.afk.kickexempt
     - essentials.helpop.receive
-    - 
+    - essentials.list.hidden
+    - essentials.whois
+    
     
 #**************
 #****Break*****
@@ -96,6 +103,13 @@ groups:
     - essentials.gamemode
     - essentials.getpos.others
     - essentials.list.hidden
+    - essentials.spawner
+    - essentials.spawner.*
+    - essentials.ban
+    - essentials.broadcast
+    - essentials.clearinventory.others
+    - essentials.gc
+    - essentials.invsee
     
 #**************
 #****Break*****
@@ -107,6 +121,8 @@ groups:
     inheritence:
     - Admin
     permisssions:
+    - essentials.ban.offline
+    - essentials.banip
 
 #**************
 #****Break*****
@@ -151,6 +167,7 @@ groups:
     - essentials.nick.magic
     - essentials.powertool
     - essentials.powertooltoggle
+    - essentials.fireball
 
 #**************
 #****Break*****
