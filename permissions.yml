@@ -16,12 +16,23 @@ groups:
     - essentials.tpaccept
     - essentials.tpadeny
     - essentials.tptoggle
+    - essentials.afk
+    - essentials.getpos
+    - essentials.help
+    - essentials.helpop
+    - essentials.info
+    - essentials.list
+    - essentials.motd
+    - essentials.msg
+    - essentials.rules
     
 # Kit Perms
     - essentials.kit
+    - essentials.kit.tools
     
 #**************
 #****Break*****
+#***Citizen****
 #**************
     
   Citizen:
@@ -36,10 +47,20 @@ groups:
 
 # Basic Command Perms
     - essentials.tp
-    - essentials.
+    - essentials.itemdb
+    - essentials.mail
+    - essentials.mail.send
+    
+# Chat Perms
+    - essentials.msg.color
+    - essentials.msg.format
+    - essentials.msg.magic
+    - essentials.msg.url
+    - essentials.realname
     
 #**************
 #****Break*****
+#*****Mod******
 #**************
     
   Mod:
@@ -48,8 +69,21 @@ groups:
     - Citizen
     permissions:
     
+# Essentials Perms
+    - essentials.feed
+    - essentials.give
+    - essentials.heal
+    - essentials.heal.others
+    - essentials.item
+    - essentials.time
+    - essentials.time.set
+    - essentials.afk.kickexempt
+    - essentials.helpop.receive
+    - 
+    
 #**************
 #****Break*****
+#****Admin*****
 #**************
     
   Admin:
@@ -58,8 +92,14 @@ groups:
     - Mod
     permissions:
     
+# Essentials Perms
+    - essentials.gamemode
+    - essentials.getpos.others
+    - essentials.list.hidden
+    
 #**************
 #****Break*****
+#***Manager****
 #**************
     
   Manager:
@@ -70,19 +110,52 @@ groups:
 
 #**************
 #****Break*****
+#***Donators***
+#****Base******
 #**************
 
   DonatorBaseLv1:
     prefix: 'This is not a proper group, ask an admin to contact and owner to fix this!'
     permissions:
-    -
+    
+#Essentials Perms
+    - essentials.feed
+    - essentials.fly
+    - essentials.heal
+    - essentials.compass
+    - essentials.depth
+    - essentials.me
+    
+    
   DonatorBaseLv2:
+    inhertance:
+    - DonatorBaseLv1
     prefix: 'This is not a proper group, ask an admin to contact and owner to fix this!'
     permissions:
-    -
+    
+# Essentials Perms
+    - essentials.enchant
+    - essentials.oversizedstacks
+    - essentials.more
+    - essentials.repair
+    - essentials.repair.armor
+    - essentials.repair.enchanted
+    - essentials.tree
+    - essentials.unlimited
+    - essentials.unlimited.item-all
+    - essentials.unlimited.item-bucket
+    - essentials.near
+    - essentials.nick
+    - essentials.nick.color
+    - essentials.nick.format
+    - essentials.nick.magic
+    - essentials.powertool
+    - essentials.powertooltoggle
 
 #**************
 #****Break*****
+#***Donators***
+#***Citizen****
 #**************
 
   DCit-Lv1:
@@ -100,6 +173,8 @@ groups:
  
 #**************
 #****Break*****
+#***Donators***
+#*****Mod******
 #**************
     
   DMod-Lv1:
@@ -117,6 +192,8 @@ groups:
 
 #**************
 #****Break*****
+#***Donators***
+#****Admin*****
 #**************
 
   DAdmin-Lv1:
@@ -135,6 +212,7 @@ groups:
 
 #**************
 #****Break*****
+#***Owners+****
 #**************
 
 
@@ -154,6 +232,7 @@ groups:
       
 #**************
 #****Break*****
+#****Worlds****
 #**************
 
 worlds:
@@ -163,6 +242,7 @@ worlds:
 
 #**************
 #****Break*****
+#****Users*****
 #**************
 
 users:
