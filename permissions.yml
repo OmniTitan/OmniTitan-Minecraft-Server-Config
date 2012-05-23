@@ -3,6 +3,8 @@ groups:
   Member:
     prefix: '&f[&5Member&f]&f'
     default: true
+    options:
+      rank: '100'
     permissions:
     
 # World Acess Perms
@@ -28,6 +30,8 @@ groups:
     - essentials.suicide
     - essentials.ban.notify
     - essentials.clearinventory
+    - essentials.kick.notify
+    - essentials.ping
     
 # Kit Perms
     - essentials.kit
@@ -43,6 +47,8 @@ groups:
     inheritance:
     - Member
     default: false
+    options:
+      rank: '200'
     permissions:
     
 # World Access Perms
@@ -72,6 +78,9 @@ groups:
     prefix: '&f[&9Mod&f]&f'
     inheritance:
     - Citizen
+    default: false
+    options:
+      rank: '300'
     permissions:
     
 # Essentials Perms
@@ -86,6 +95,10 @@ groups:
     - essentials.helpop.receive
     - essentials.list.hidden
     - essentials.whois
+    - essentials.invsee.modify
+    - essentials.kick
+    - essentials.mute.exempt
+    - essentials.remove
     
     
 #**************
@@ -97,6 +110,9 @@ groups:
     prefix: '&f[&2Admin&f]&f'
     inheritance:
     - Mod
+    default: false
+    options:
+      rank: '400'
     permissions:
     
 # Essentials Perms
@@ -109,7 +125,9 @@ groups:
     - essentials.broadcast
     - essentials.clearinventory.others
     - essentials.gc
-    - essentials.invsee
+    - essentials.invsee.modify
+    - essentials.mute
+    - essentials.spawnmob
     
 #**************
 #****Break*****
@@ -120,9 +138,16 @@ groups:
     prefix: '&f[&4Manager&f]&f'
     inheritence:
     - Admin
+    default: false
+    options:
+      rank: '500'
     permisssions:
+    - essentials.*
     - essentials.ban.offline
     - essentials.banip
+    - essentials.kickall
+    - essentials.socialspy
+    - essentials.sudo
 
 #**************
 #****Break*****
@@ -168,6 +193,8 @@ groups:
     - essentials.powertool
     - essentials.powertooltoggle
     - essentials.fireball
+    - essentials.lightning
+    - essentials.spawnmob.wolf
 
 #**************
 #****Break*****
@@ -180,12 +207,18 @@ groups:
     inheritance:
     - Citizen
     - DonatorBaseLv1
+    default: false
+    options:
+      rank: '225'
     permissions:
   DCit-Lv2:
     prefix: '&f[&c$$&f][&bCitizen&f]&b'
     inheritance:
     - Citizen
     - DonatorBaseLv2
+    default: false
+    options:
+      rank: '250'
     permissions:
  
 #**************
@@ -199,12 +232,18 @@ groups:
     inheritance:
     - Mod
     - DonatorBaseLv1
+    default: false
+    options:
+      rank: '325'
     permissions:
   DMod-Lv2:
     prefix: '&f[&c$$&f][&9Mod&f]&9'
     inheritance:
     - Mod
     - DonatorBaseLv2
+    default: false
+    options:
+      rank: '350'
     permissions:
 
 #**************
@@ -218,14 +257,37 @@ groups:
     inheritance:
     - Admin
     - DonatorBaseLv1
+    default: false
+    options:
+      rank: '425'
     permissions:
   DAdmin-Lv2:
     prefix: '&f[&c$$&f][&2Admin&f]&2'
     inheritance:
     - Admin
     - DonatorBaseLv2
+    default: false
+    options:
+      rank: '450'
     permissions:
+    
 
+#**************
+#****Break*****
+#***Donators***
+#***Manager*****
+#**************
+
+  DMan-Lv1:
+    prefix: '&f[&c$$&f][&4Manager&f]&4'
+    inheritance:
+    - Manager
+    - DonatorBaseLv1
+    - DonatorBaseLv2
+    default: false
+    options:
+      rank: '525'
+    permissions:
 
 #**************
 #****Break*****
@@ -236,8 +298,11 @@ groups:
   Co-Owner:
     prefix: '&f[&6C&2o&f-&6O&2w&6n&2e&6r&f]&2'
     permissions:
+    - essentials.sudo.exempt
 
   Owner:
+    inheritance:
+    - Co-Owner
     prefix: '&f[&5O&6w&4n&6e&5r&f]&4'
     permissions:
     - '*'
