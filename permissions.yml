@@ -84,7 +84,8 @@ groups:
     - essentials.signs.use.mail
     - essentials.signs.use.time
     - essentials.signs.use.warp
-    essentials.signs.use.weather
+    - essentials.signs.use.weather
+    - essentials.signs.use.spawnmob
     
 # Chat Perms
     - essentials.msg.color
@@ -132,6 +133,17 @@ groups:
     - essentials.teleport.hidden
     - essentials.teleport.timer.bypass
     
+# Essentials Sign Perms
+    - essentials.signs.break.disposal
+    - essentials.signs.break.heal
+    - essentials.signs.break.mail
+    - essentials.signs.break.warp
+    - essentials.signs.create.disposal
+    - essentials.signs.create.heal
+    - essentials.signs.create.mail
+    - essentials.signs.create.warp
+    
+    
 # Chat Perms
     - essentials.chat.color
     - essentials.chat.format
@@ -168,6 +180,17 @@ groups:
     - essentials.weather
     - essentials.home.others
     - essentials.joinfullserver
+    
+# Essentials Sign Perms
+    - essentials.signs.break.enchant
+    - essentials.signs.break.free
+    - essentials.signs.break.gamemode
+    - essentials.signs.break.kit
+    - essentials.signs.break.time
+    - essentials.signs.break.weather
+    - essentials.signs.create.kit
+    - essentials.signs.create.spawnmob
+    - essentials.signs.create.time
 
 # Chat Perms
     - essentials.broadcast
@@ -222,7 +245,10 @@ groups:
     - essentials.sethome.multiple.5
     - essentials.top
     - essentials.tpaall
+    
+# Essentials Sign Perms
     - essentials.signs.use.enchant
+    - essentials.signs.break.enchant
 
 # Chat Perms
     - essentials.chat.color
@@ -262,8 +288,15 @@ groups:
     - essentials.jump
     - essentials.sethome.multiple.unlimited
     - essentials.chat.url
+    - essentials.signs.create.spawnmob
+    
+# Essentials Sign Perms
+    - essentials.signs.break.gamemode
+    - essentials.signs.create.gamemode
     - essentials.signs.use.gamemode
     - essentials.signs.use.spawnmob
+    - essentials.signs.break.warp
+    - essentials.signs.create.warp
     
 # Chat Perms
     - essentials.chat.format
