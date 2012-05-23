@@ -11,13 +11,11 @@ groups:
     - multiverse.access.F
     - multiverse.access.world
     - multiverse.access.world_nether
-    - multiverse.access.world_the_end
-
+    - essentials.world.F
+    - essentials.world.world
+    - essentials.world.world_nether
+    
 # Essential Command Perms
-    - essentials.tpa
-    - essentials.tpaccept
-    - essentials.tpadeny
-    - essentials.tptoggle
     - essentials.afk
     - essentials.getpos
     - essentials.help
@@ -32,6 +30,20 @@ groups:
     - essentials.clearinventory
     - essentials.kick.notify
     - essentials.ping
+    - essentials.spawn
+    - essentials.back.ondeath
+    - essentials.home
+    - essentials.delhome
+    - essentials.sethome
+    - essentials.build
+    
+    # Teleporting Commands
+    - essentials.tpa
+    - essentials.tpaccept
+    - essentials.tpdeny
+    - essentials.tptoggle
+    - essentials.tpahere
+    
     
 # Kit Perms
     - essentials.kit
@@ -53,12 +65,26 @@ groups:
     
 # World Access Perms
     - multiverse.access.skylands
+    - multiverse.access.world_the_end
+    - essentials.world.world_the_end
+    - essentials.world.skylands
 
-# Basic Command Perms
+# Essentials Command Perms
     - essentials.tp
     - essentials.itemdb
     - essentials.mail
     - essentials.mail.send
+    - essentials.back
+    - essentials.tppos
+    
+# Essential Sign Perms
+    - essentials.signs.use.disposal
+    - essentials.signs.use.free
+    - essentials.signs.use.heal
+    - essentials.signs.use.mail
+    - essentials.signs.use.time
+    - essentials.signs.use.warp
+    essentials.signs.use.weather
     
 # Chat Perms
     - essentials.msg.color
@@ -99,7 +125,17 @@ groups:
     - essentials.kick
     - essentials.mute.exempt
     - essentials.remove
+    - essentials.tpaall
+    - essentials.teleport.hidden
+    - essentials.tpo
+    - essentials.teleport.cooldown.bypass
+    - essentials.teleport.hidden
+    - essentials.teleport.timer.bypass
     
+# Chat Perms
+    - essentials.chat.color
+    - essentials.chat.format
+    - essentials.chat.url
     
 #**************
 #****Break*****
@@ -122,12 +158,22 @@ groups:
     - essentials.spawner
     - essentials.spawner.*
     - essentials.ban
-    - essentials.broadcast
     - essentials.clearinventory.others
     - essentials.gc
     - essentials.invsee.modify
-    - essentials.mute
     - essentials.spawnmob
+    - essentials.tempban
+    - essentials.unban
+    - essentials.unbanip
+    - essentials.weather
+    - essentials.home.others
+    - essentials.joinfullserver
+
+# Chat Perms
+    - essentials.broadcast
+    - essentials.mute
+    - essentials.chat.magic
+    - essentials.geoip.show
     
 #**************
 #****Break*****
@@ -148,6 +194,9 @@ groups:
     - essentials.kickall
     - essentials.socialspy
     - essentials.sudo
+    - essentials.delhome.others
+    - essentials.tpohere
+    - essentials.joinfullserver
 
 #**************
 #****Break*****
@@ -159,6 +208,9 @@ groups:
     prefix: 'This is not a proper group, ask an admin to contact and owner to fix this!'
     permissions:
     
+# Reserved Slot Perms
+    - essentials.joinfullserver
+    
 #Essentials Perms
     - essentials.feed
     - essentials.fly
@@ -166,6 +218,18 @@ groups:
     - essentials.compass
     - essentials.depth
     - essentials.me
+    - essentials.sethome.multiple
+    - essentials.sethome.multiple.5
+    - essentials.top
+    - essentials.tpaall
+    - essentials.signs.use.enchant
+
+# Chat Perms
+    - essentials.chat.color
+    - essentials.signs.color
+    - essentials.signs.format
+    - essentials.signs.magic
+
     
     
   DonatorBaseLv2:
@@ -195,6 +259,15 @@ groups:
     - essentials.fireball
     - essentials.lightning
     - essentials.spawnmob.wolf
+    - essentials.jump
+    - essentials.sethome.multiple.unlimited
+    - essentials.chat.url
+    - essentials.signs.use.gamemode
+    - essentials.signs.use.spawnmob
+    
+# Chat Perms
+    - essentials.chat.format
+    - essentials.chat.magic
 
 #**************
 #****Break*****
