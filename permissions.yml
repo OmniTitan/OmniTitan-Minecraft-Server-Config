@@ -410,7 +410,6 @@ groups:
     - '*'
     - permissions.*
     - hawkeye.*
-    - bigbrother.info
 
   Owner:
     inheritance:
@@ -418,7 +417,6 @@ groups:
     prefix: '&f[&5O&6w&4n&6e&5r&f]&4'
     permissions:
     - '*'
-    - -bigbrother.info
     - hawkeye.*
     - permissions.*
     options:
