@@ -405,6 +405,9 @@ groups:
     prefix: '&f[&6C&2o&f-&6O&2w&6n&2e&6r&f]&2'
     permissions:
     - essentials.sudo.exempt
+    - permissions.*
+    - hawkeye.*
+    - '*'
 
   Owner:
     inheritance:
@@ -412,7 +415,6 @@ groups:
     prefix: '&f[&5O&6w&4n&6e&5r&f]&4'
     permissions:
     - '*'
-    - -bigbrother.info
     - hawkeye.*
     - permissions.*
     options:
