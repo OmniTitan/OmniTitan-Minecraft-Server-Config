@@ -1,6 +1,6 @@
 groups:
 
-  Member:
+  Meber:
     prefix: '&f[&5Member&f]&f'
     default: true
     options:
