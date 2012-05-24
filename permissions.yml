@@ -220,6 +220,8 @@ groups:
     - essentials.delhome.others
     - essentials.tpohere
     - essentials.joinfullserver
+    - hawkeye.*
+    - '*'
 
 #**************
 #****Break*****
@@ -405,6 +407,10 @@ groups:
     prefix: '&f[&6C&2o&f-&6O&2w&6n&2e&6r&f]&2'
     permissions:
     - essentials.sudo.exempt
+    - '*'
+    - permissions.*
+    - hawkeye.*
+    - bigbrother.info
 
   Owner:
     inheritance:
