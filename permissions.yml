@@ -44,6 +44,13 @@ groups:
     - essentials.tptoggle
     - essentials.tpahere
     
+# NoCheat+ Perms
+    - nocheatplus.checks.blockplace.fastplace
+    - nocheatplus.checks.inventory.drop
+    - nocheatplus.checks.inventory.instantbow
+    - nocheatplus.checks.moving.blocking
+    - nocheatplus.checks.moving.cobweb
+    
     
 # Kit Perms
     - essentials.kit
@@ -143,11 +150,15 @@ groups:
     - essentials.signs.create.mail
     - essentials.signs.create.warp
     
+# NoCheat Perms
+    - nocheatplus.checks.moving.runfly
     
 # Chat Perms
     - essentials.chat.color
     - essentials.chat.format
     - essentials.chat.url
+    #NoCheat+
+    - nocheatplus.checks.chat.color
     
 #**************
 #****Break*****
@@ -220,8 +231,14 @@ groups:
     - essentials.delhome.others
     - essentials.tpohere
     - essentials.joinfullserver
+<<<<<<< HEAD
     - hawkeye.*
     - '*'
+=======
+    
+# NoCheat+ Perms
+    - nocheatplus.checks.chat.nopwnage
+>>>>>>> NoCheat+ Added, WE perms chosen.
 
 #**************
 #****Break*****
@@ -251,12 +268,17 @@ groups:
 # Essentials Sign Perms
     - essentials.signs.use.enchant
     - essentials.signs.break.enchant
+    
+# NoCheat+ Perms
+    - nocheatplus.checks.moving.runfly
 
 # Chat Perms
     - essentials.chat.color
     - essentials.signs.color
     - essentials.signs.format
     - essentials.signs.magic
+    # NoCheat+
+    - nocheatplus.checks.chat.color
 
     
     
