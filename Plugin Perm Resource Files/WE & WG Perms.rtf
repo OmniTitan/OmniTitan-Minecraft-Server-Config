@@ -1,5 +1,5 @@
 ############################ ##########  ##########  ##########  ##############################
-############################ WE & WG Permission Resource File ##############################
+############################## WE & WG Permission Resource File ###############################
 ############################ ##########  ##########  ##########  ##############################
 ###### ##########  ##########  ##########  ######  ######  ########  ########  ########  ######
 ###### Any commands that have been looked  ######  ######  Names with a "-" in front of  ######
@@ -8,10 +8,13 @@
 ###### marked with a hash and what group   ######  ######  the group.                    ######
 ###### it has been used in.                ######  ######                                ######
 ###### ##########  ##########  ##########  ######  ######  ########  ########  ########  ######
-###### Some groups will have access to all ######
-###### of these permissions.               ######
-###### ##########  ##########  ##########  ######
-
+###### Some groups will have access to all ######  ######  All #'s with a * behind them  ######
+###### of these permissions.               ######  ######  have not had their respective ######
+###### ##########  ##########  ##########  ######  ######  perm node added to the group  ######
+###### !! = May error
+###### -! = Does not seem to exist
+###### * = Not in perm file yet
+###### ! = Perm node not found
 
 /god  		 [player] 	Gives a player invincibility.
 /ungod 		 [player] 	Remove a player's invincibility.
@@ -25,14 +28,14 @@ Emergency commands
 
 #None		/stopfire 	[world] 	Stops fire spread instantly for your current world. This is a temporary toggle that will be disabled on server restart. Players who join will be notified when fire spread is disabled.
 #None		/allowfire 	[world] 	Disables the toggle status of /stopfire.
-#Admin		/stoplag 	[world] 	Stops all intensive server processes such as water and lava flow, redstone propagation, fire, TNT detonation, mob spawning, and other similar events. This is a temporary global toggle that will be disabled on server restart. Players who join will be notified when this mode is on. (Note: As of 5.2, the disabling of TNT explosion is not effective. It works much better in developmental versions.)
-#Admin		/stoplag -c 	[world] 	Disables the toggle status of /stoplag
+!#Admin		/stoplag 	[world] 	Stops all intensive server processes such as water and lava flow, redstone propagation, fire, TNT detonation, mob spawning, and other similar events. This is a temporary global toggle that will be disabled on server restart. Players who join will be notified when this mode is on. (Note: As of 5.2, the disabling of TNT explosion is not effective. It works much better in developmental versions.)
+!#Admin		/stoplag -c 	[world] 	Disables the toggle status of /stoplag
 #None		/worldguard flushstates 	[player] 	Flush any data stored in the state manager that tracks player location for the entry, exit, greeting and farewell flags. Use this if someone is stuck in an exit deny region (or outside an entry deny one) after the flag or region has been removed.
 
 
 WorldGuard commands
 
-#Mod		/worldguard version 		Prints the current WorldGuard version.
+!#Auto All	/worldguard version 		Prints the current WorldGuard version.
 #None		/worldguard reload 		Reloads WorldGuard's configuration files.
 #None		/worldguard report 	[-p] 	Writes a report of all WorldGuard settings and basic information about the current running server to a file in the WorldGuard plugin folder.
 
@@ -174,8 +177,8 @@ Getting around
 #D1			/ascend 		Bukkit.png Sp.png 	Go up one level.
 #D1			/descend 		Bukkit.png Sp.png 	Go down one level.
 #D1			/ceil 	[clearance] 	Bukkit.png Sp.png 	Get to the ceiling.
-#D1			/thru 		Bukkit.png Sp.png 	Go through the wall that you are looking at.
-#D1			/jumpto 		Bukkit.png Sp.png 	Jump to the block that you are looking at.
+!!#D1			/thru 		Bukkit.png Sp.png 	Go through the wall that you are looking at.
+!!#D1			/jumpto 		Bukkit.png Sp.png 	Jump to the block that you are looking at.
 #D2			/up 	[distance] 	Bukkit.png Sp.png 	Go up some distance.
 
 
@@ -197,16 +200,16 @@ Scripting
 
 General commands
 
-#Citizen	/search 	<item> 	Bukkit.png Sp.png 	Search for an item by its name.
-/#None		/worldedit reload 		Bukkit.png Sp.png 	Reloads WorldEdit's configuration.
-#Mod		//worldedit version 		Bukkit.png Sp.png 	Gets WorldEdit's version.
+!!#Citizen	/search 	<item> 	Bukkit.png Sp.png 	Search for an item by its name.
+#None		/worldedit reload 		Bukkit.png Sp.png 	Reloads WorldEdit's configuration.
+!#Auto All	//worldedit version 		Bukkit.png Sp.png 	Gets WorldEdit's version.
 #None		//worldedit tz 		Bukkit.png Sp.png 	Set your timezone. This is temporary.
 
 
 Biomes
 
-#Mod		///biome 		Bukkit.png Sp.png 	Get the biometype you are standing in.
-#Mod		/biomelist 		Bukkit.png Sp.png 	List the available biome types
-#Mod		//setbiome 	[-p] <biome type> 	Bukkit.png Sp.png 	Set the selected area to the specified biome type.
+-!#Mod		///biome 		Bukkit.png Sp.png 	Get the biometype you are standing in.
+-!#Mod		/biomelist 		Bukkit.png Sp.png 	List the available biome types
+-!#Mod		//setbiome 	[-p] <biome type> 	Bukkit.png Sp.png 	Set the selected area to the specified biome type.
 
 The -p flag changes the block (column) you are standing in. 

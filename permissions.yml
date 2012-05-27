@@ -56,6 +56,9 @@ groups:
     - essentials.kit
     - essentials.kit.tools
     
+# WE & WG Perms
+    - worldedit.tool.info
+    
 #**************
 #****Break*****
 #***Citizen****
@@ -160,6 +163,29 @@ groups:
     #NoCheat+
     - nocheatplus.checks.chat.color
     
+# WE & WG Perms
+    - worldedit.limit
+    - worldedit.history.undo
+    - worldedit.history.redo
+    - worldedit.wand
+    - worldedit.wand.toggle
+    - worldedit.selection.pos
+    - worldedit.selection.hpos
+    - worldedit.selection.size
+    - worldedit.analysis.count
+    - worldedit.analysis.distr
+    - worldedit.generation.forest
+    - worldedit.generation.pumpkins
+    - worldedit.drain
+    - worldedit.fixwater
+    - worldedit.fixlava
+    - worldedit.removenear
+    - worldedit.snow
+    - worldedit.thaw
+    - worldedit.extinguish
+    - worldedit.butcher
+    - worldedit.remove
+    
 #**************
 #****Break*****
 #****Admin*****
@@ -209,6 +235,28 @@ groups:
     - essentials.chat.magic
     - essentials.geoip.show
     
+# WE & WG Perms
+    - worldedit.selection.expand
+    - worldedit.selection.contract
+    - worldedit.selection.outset
+    - worldedit.selection.inset
+    - worldedit.selection.shift
+    - worldedit.region.set
+    - worldedit.region.replace
+    - worldedit.region.overlay
+    - worldedit.region.walls
+    - worldedit.region.faces
+    - worldedit.region.smooth
+    - worldedit.region.move
+    - worldedit.clipboard.copy
+    - worldedit.clipboard.cut
+    - worldedit.clipboard.paste
+    - worldedit.clipboard.rotate
+    - worldedit.clipboard.flip
+    - worldedit.clipboard.clear
+    - worldedit.generation.cylinder
+    - worldedit.generation.sphere
+        
 #**************
 #****Break*****
 #***Manager****
@@ -279,6 +327,16 @@ groups:
     - essentials.signs.magic
     # NoCheat+
     - nocheatplus.checks.chat.color
+    
+# WE & WG Perms
+    - worldedit.superpickaxe
+    - worldedit.navigation.unstuck
+    - worldedit.navigation.ascend
+    - worldedit.navigation.descend
+    - worldedit.navigation.ceil
+    - worldedit.navigation.thru
+    - worldedit.navigation.jumpto
+    - 
 
     
     
@@ -325,6 +383,14 @@ groups:
 # Chat Perms
     - essentials.chat.format
     - essentials.chat.magic
+    
+# WE & WG Perms
+    - worldedit.superpickaxe.area
+    - worldedit.superpickaxe.recursive
+    - worldedit.tool.tree
+    - worldedit.tool.replacer
+    - worldedit.tool.data-cycler
+    - worldedit.navigation.up
 
 #**************
 #****Break*****
