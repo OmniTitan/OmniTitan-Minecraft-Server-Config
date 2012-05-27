@@ -213,3 +213,117 @@ Biomes
 -!#Mod		//setbiome 	[-p] <biome type> 	Bukkit.png Sp.png 	Set the selected area to the specified biome type.
 
 The -p flag changes the block (column) you are standing in. 
+
+
+
+############# WorldGuard Command + Perms ###############
+
+
+#None		/god		worldguard.god
+						worldguard.god.other (for other players)
+#None		/ungod		worldguard.ungod
+						worldguard.ungod.other (for other players)
+#Void		/heal		worldguard.heal
+						worldguard.heal.other (for other players)
+#None		/slay		worldguard.slay
+						worldguard.slay.other (for other players)
+#None		/locate		worldguard.locate
+#Various	/stack		#D1		worldguard.stack
+						#D1		worldguard.stack.illegitimate
+						#D1		worldguard.stack.damaged
+Emergency commands
+#None		/stopfire			worldguard.fire-toggle.*
+#None		/allowfire			worldguard.fire-toggle.*
+#None		/halt-activity		worldguard.halt-activity.*
+#None		/halt-activity -c	worldguard.halt-activity.*
+
+Area protection commands
+#Admin		/region define		worldguard.region.define
+#Admin		/region redefine	worldguard.region.redefine.own (lets owners redefine their own regions)
+								worldguard.region.redefine.member (lets members redefine their own regions)
+								worldguard.region.redefine
+#None		/region claim		worldguard.region.claim
+#Mod		/region select		worldguard.region.select.own.* (lets owners select their own regions)
+								worldguard.region.select.own.<region> (lets owners select their own regions for the given region ID)
+								worldguard.region.select.member.* (lets members select their own regions)
+								worldguard.region.select.member.<region> (lets members select their own regions for the given region ID)
+								worldguard.region.select.*
+								worldguard.region.select.<region> (for a given region)
+These are also checked for /region info with the -s flag.
+#Member		/region info		worldguard.region.info.own (lets owners query their own regions)
+								worldguard.region.info.member (lets members query their own regions)
+								worldguard.region.info
+#Various	/region addowner	#Member		worldguard.region.addowner.own.*
+								#None		worldguard.region.addowner.member.*
+								#Mod		worldguard.region.addowner.*
+#Various	/region removeowner	#None		worldguard.region.removeowner.own.*
+Alias remowner					#None		worldguard.region.removeowner.member.*
+								#Mod		worldguard.region.removeowner.*
+#Various	/region addmember	#Member		worldguard.region.addmember.own.*
+								#None		worldguard.region.addmember.member.*
+								#Mod		worldguard.region.addmember.*
+#Various	/region removemember	
+Alias remmember, removemem, remmem
+								#Member		worldguard.region.removemember.own.*
+								#None		worldguard.region.removemember.member.*
+								#Mod		worldguard.region.removemember.*
+#Various	/region list		#Member		worldguard.region.list.own (lets owners see list of their regions)
+								#Mod		worldguard.region.list
+Warning: Permissions are currently not checked for the other world if another world is specified.
+
+#Various	/region flag	
+There are TWO sets of permissions that you must give. The first is the permission to use the command.
+								#Member		worldguard.region.flag.regions.own.* (lets owners set the flags for their own regions)
+								#None		worldguard.region.flag.regions.own.<region> (lets owners set the flags for their own regions for the given region ID)
+								#None		worldguard.region.flag.regions.member.* (lets members set the flags for their own regions)
+								#None		worldguard.region.flag.regions.member.<region> (lets members set the flags for their own regions for the given region ID)
+								#Mod		worldguard.region.flag.regions.*
+								#None		worldguard.region.flag.regions.<region> (for a given region)
+					Then you must give permission to use the flags.
+								#None		worldguard.region.flag.flags.<flag>.* for the given flag
+								#Member		worldguard.region.flag.flags.* for all flags
+Example: The permission for the chest-access flag
+worldguard.region.flag.flags.chest-access.* would give a user only the ability to set that flag.
+
+#Admin		/region setpriority	worldguard.region.setpriority.own.* (lets owners set the priority of their own regions)
+								worldguard.region.setpriority.own.<region> (lets owners set the priority of their own regions for the given region ID)
+								worldguard.region.setpriority.member.* (lets members set the priority of their own regions)
+								worldguard.region.setpriority.member.<region> (lets members set the priority of their own regions for the given region ID)
+								worldguard.region.setpriority.*
+								worldguard.region.setpriority.<region> (for a given region)
+
+#Admin		/region setparent	worldguard.region.setparent.own.* (lets owners set the parent of their own regions)
+								worldguard.region.setparent.own.<region> (lets owners set the parent of their own regions for the given region ID)
+								worldguard.region.setparent.member.* (lets members set the parent of their own regions)
+								worldguard.region.setparent.member.<region> (lets members set the parent of their own regions for the given region ID)
+								worldguard.region.setparent.*
+								worldguard.region.setparent.<region> (for a given region)
+These are also checked for the parent region.
+
+#Various	/region teleport	#Member		worldguard.region.teleport.own.* (lets owners teleport to their own regions)
+								#None		worldguard.region.teleport.own.<region> (lets owners teleport to their own regions for the given region ID)
+								#Member		worldguard.region.teleport.member.* (lets members teleport to their own regions)
+								#None		worldguard.region.teleport.member.<region> (lets members teleport to their own regions for the given region ID)
+								#Mod		worldguard.region.teleport.*
+								#None		worldguard.region.teleport.<region> (for a given region)
+
+#Admin		/region remove		worldguard.region.remove.own.* (lets owners remove their own regions)
+								worldguard.region.remove.own.<region> (lets owners remove their own regions for the given region ID)
+								worldguard.region.remove.member.* (lets members remove their own regions)
+								worldguard.region.remove.member.<region> (lets members remove their own regions for the given region ID)
+								worldguard.region.remove.*
+								worldguard.region.remove.<region> (for a given region)
+
+WorldGuard commands
+
+#None		/worldguard version	(Not applicable)
+#None		/worldguard reload	worldguard.reload
+#None		/worldguard report	worldguard.report
+					worldguard.report.pastebin (for pastebin support(paste bin is where you can "paste" types of coding.)
+
+ 
+Miscellaneous
+
+					#Manager	worldguard.region.bypass.<world> (gives users with this permission the ability to bypass region protection)
+					#Mod		worldguard.notify (Receive blacklist events notifications)
+					!#			worldguard.region.wand (allow access to the region wand tool)

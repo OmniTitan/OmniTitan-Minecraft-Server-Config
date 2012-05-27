@@ -58,6 +58,14 @@ groups:
     
 # WE & WG Perms
     - worldedit.tool.info
+    - worldguard.region.info
+    - worldguard.region.addmember.own.*
+    - worldguard.region.removemember.own.*
+    - worldguard.region.list.own
+    - worldguard.region.flag.regions.own.*
+    - worldguard.region.flag.flags.*
+    - worldguard.region.teleport.own.*
+    - worldguard.region.teleport.member.*
     
 #**************
 #****Break*****
@@ -185,6 +193,15 @@ groups:
     - worldedit.extinguish
     - worldedit.butcher
     - worldedit.remove
+    - worldguard.region.select.*
+    - worldguard.region.addowner.*
+    - worldguard.region.removeowner.*
+    - worldguard.region.addmember.*
+    - worldguard.region.removemember.*
+    - worldguard.region.list
+    - worldguard.region.flag.regions.*
+    - worldguard.region.teleport.*
+    - worldguard.notify
     
 #**************
 #****Break*****
@@ -256,6 +273,11 @@ groups:
     - worldedit.clipboard.clear
     - worldedit.generation.cylinder
     - worldedit.generation.sphere
+    - worldguard.region.define
+    - worldguard.region.redefine
+    - worldguard.region.setpriority.*
+    - worldguard.region.setparent.*
+    - worldguard.region.remove.*
         
 #**************
 #****Break*****
@@ -279,10 +301,9 @@ groups:
     - essentials.delhome.others
     - essentials.tpohere
     - essentials.joinfullserver
-<<<<<<< HEAD
+    - worldguard.region.bypass.*
     - hawkeye.*
     - '*'
-=======
     
 # NoCheat+ Perms
     - nocheatplus.checks.chat.nopwnage
@@ -391,6 +412,9 @@ groups:
     - worldedit.tool.replacer
     - worldedit.tool.data-cycler
     - worldedit.navigation.up
+    - worldguard.stack.
+    - worldguard.stack.illegitimate
+    - worldguard.stack.damaged
 
 #**************
 #****Break*****
