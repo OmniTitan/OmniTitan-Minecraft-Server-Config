@@ -1,0 +1,1043 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                       Notes                          | #
+# +------------------------------------------------------+ #
+############################################################
+
+# If you want to use special characters in this document, such as accented letters, you MUST save the file as UTF-8, not ANSI.
+# If you receive an error when Essentials loads, ensure that:
+#   - No tabs are present: YAML only allows spaces
+#   - Indents are correct: YAML heirarchy is based entirely on indentation
+#   - You have "escaped" all apostrophes in your text: If you want to write "don't", for example, write "don''t" instead (note the doubled apostrphe)
+#   - List items are prefixed with a hyphen and indented:
+#       lists:
+#         - look like this
+#       not:
+#       - like this
+#   - Text with symbols is enclosed in single or double quotation marks
+#   - CraftBukkit and Permissions have been updated: CraftBukkit and Essentials almost always line up, but sometimes other plugins fall behind CraftBukkit's multiple daily updates
+#   - You have saved the document as UTF-8, NOT the default, ANSI
+
+
+
+
+
+############################################################
+# +------------------------------------------------------+ #
+# |                 Essentials (Global)                  | #
+# +------------------------------------------------------+ #
+############################################################
+
+# A color code between 0-9 or a-f. Set to 'none' to disable.
+ops-name-color: 'none'
+
+# The character(s) to prefix all nicknames, so that you know they are not true usernames.
+nickname-prefix: ''
+
+# The delay, in seconds, required between /home, /tp, etc.
+teleport-cooldown: 5
+
+# The delay, in seconds, before a user actually teleports.  If the user moves or gets attacked in this timeframe, the teleport never occurs.
+teleport-delay: 0
+
+# The delay, in seconds, required between /heal attempts
+heal-cooldown: 60
+
+# The number of items given if the quantity parameter is left out in /item or /give.
+default-stack-size: 64
+
+# What to prevent from /i /give
+# e.g item-spawn-blacklist: 46,11,10
+item-spawn-blacklist:
+
+# Set this to true if you want permission based item spawn rules
+# Permissions:
+#  - essentials.itemspawn.item-all
+#  - essentials.itemspawn.item-[itemname]
+   - essentials.itemspawn.item-[9]
+   - essentials.itemspawn.item-[8]
+   - essentials.itemspawn.item-[10]
+   - essentials.itemspawn.item-[11]
+   - essentials.itemspawn.item-[326]
+   - essentials.itemspawn.item-[327]
+
+#  - essentials.give.item-all
+#  - essentials.give.item-[itemname]
+   - essentials.give.item-[9]
+   - essentials.give.item-[8]
+   - essentials.give.item-[10]
+   - essentials.give.item-[11]
+permission-based-item-spawn: false
+
+# Whether or not to reclaim memory on player logout; this is technical, and should only be changed under special circumstances.
+# This generally increases server stability unless very specific runtime configurations are used.
+# HOWEVER, it is known to cause lag upon users logging OUT, so beware!
+reclaim-onlogout: false
+
+# Should primitive spawn protection be enabled?  For most servers, this should be flase; it is better to use a third-party plugin to protect it.
+spawn-protection: false
+
+# Nether settings (switch between worlds with "/world nether" and "/world normal")
+# Sets whether the nether system is enabled, what folder to save the world in, and whether portals should teleport players between worlds.
+nether:
+  enabled: true
+  folder: nether
+  portals-enabled: true
+  generate-exit-portals: true
+  ratio: 16
+
+# Mob limit on spawnmob
+spawnmob-limit: 10
+
+#Shall we notify users when using /lightning
+warn-on-smite: true
+
+# The message of the day, displayed on connect and by typing /motd.
+motd:
+  - '&cWelcome, {PLAYER}&c!'
+  - '&fVisit &cwww.omnititan.com&f for a list of commands.'
+  - 'Currently online: {PLAYERLIST}'
+  - 'You have {MAILS} mail messages'
+
+# The server rules, available by typing /rules
+rules:
+  - '[1] Be respectful'
+  - '[2] Be ethical'
+  - '[3] Use common sense'
+  
+# When a command conflicts with another plugin, by default, Essentials will try to force the OTHER plugin to take
+# priority.  If a command is in this list, Essentials will try to give ITSELF priority.  This does not always work:
+# usually whichever plugin was updated most recently wins out.  However, the full name of the command will always work.
+# For example, if WorldGuard and Essentials are both enabled, and WorldGuard takes control over /god, /essentials:god
+# will still map to Essentials, whereas it might normally get forced upon WorldGuard.  Commands prefixed with an "e",
+# such as /egod, will always grant Essentials priority.
+# We should try to take priority over /god.  If this doesn't work, use
+# /essentials:god or /egod.  If god is set using WorldGuard, use /ungod to remove then use whichever you see fit.
+overridden-commands:
+  - god
+
+# Disabled commands will be completelly unavailable on the server.
+disabled-commands:
+# - nick
+
+# Restricted commands will only be available to ops.
+# These will have NO EFFECT if you have Permissions installed!
+# These are here only if you want something simpler than Permissions.
+restricted-commands:
+  - bigtree
+  - item
+  - give
+  - heal
+  - plugin
+  - time
+  - top
+  - tp
+  - tphere
+  - tree
+  - setspawn
+  - antioch
+  - unban
+  - top
+  - jump
+  - tpo
+  - tppos
+  - tpohere
+  - economy
+  - setwarp
+  - delwarp
+  - essentials
+  - gc
+  - spawnmob
+  - broadcast
+  - burn
+  - ext
+  - kill
+  - ping
+  - banip
+  - unban
+  - mute
+  - kick
+  - kickall
+  - unbanip
+  - togglejail
+  - setjail
+  - eco.loan
+
+# Note: All items MUST be followed by a quantity!
+# Times are measured in seconds.
+kits:
+  tools:
+    delay: 10
+    items:
+      - 277 1
+      - 278 1
+      - 279 1
+  brickblock:
+    delay: 10
+    items:
+      - 45 128
+  glass:
+    delay: 10
+    items:
+      - 20 128
+  stone:
+    delay: 10
+    items:
+      - 01 128
+  grass:
+    delay: 10
+    items:
+      - 02 128
+  plank:
+    delay: 10
+    items:
+      - 05 128
+  bedrock:
+    delay: 10
+    items:
+      - 07 64
+  sand:
+    delay: 10
+    items:
+      - 12 128
+  bone:
+    delay: 10
+    items:
+      - 352 64
+  book:
+    delay: 10
+    items: 
+      - 340 64
+  clay:
+    delay: 10
+    items:
+      - 337 64
+  claybrick:
+    delay: 10
+    items:
+      - 336 64
+  coal:
+    delay: 10
+    items:
+      - 263 128
+  diamond:
+    delay: 10
+    items:
+      - 264 64
+  feather:
+    delay: 10
+    items:
+      - 288 64
+  flint:
+    delay: 10
+    items:
+      - 318 01
+  gold:
+    delay: 10
+    items:
+      - 266 64
+  iron:
+    delay: 10
+    items:
+      - 265 64
+  rdsdust:
+    delay: 10
+    items:
+      - 55 128
+  rdsrepeater:
+    delay: 10
+    items:
+      - 356 64
+  rdstorch:
+    delay: 10 
+    items:
+      - 76 64
+  redstone:
+    delay: 10 
+    items:
+      - 331 128
+  slimeball:
+    delay: 10 
+    items:
+      - 341 64
+  stick:
+    delay: 10 
+    items:
+      - 280 64
+  string:
+    delay: 10 
+    items:
+      - 287 64
+  apple:
+    delay: 10 
+    items:
+      - 260 4
+  bread:
+    delay: 10 
+    items:
+      - 297 4
+  cake:
+    delay: 10 
+    items:
+      - 354 4
+  fish:
+    delay: 10 
+    items:
+      - 349 4
+  cookedfish:
+    delay: 10 
+    items:
+      - 350 4
+  pork:
+    delay: 10 
+    items:
+      - 319 4
+  cookedpork:
+    delay: 10 
+    items:
+      - 320 4
+  cookie:
+    delay: 10 
+    items:
+      - 357 4
+  goldapple:
+    delay: 10 
+    items:
+      - 322 4
+  milk:
+    delay: 10 
+    items:
+      - 335 2
+  mushroomstew:
+    delay: 10 
+    items:
+      - 282 2
+  redmushroom:
+    delay: 10 
+    items:
+      - 40 64
+  brownmushroom:
+    delay: 10 
+    items:
+      - 39 64
+  redflower:
+    delay: 10 
+    items:
+      - 38 64
+  yellowflower:
+    delay: 10 
+    items:
+      - 37 64
+  sapling:
+    delay: 10 
+    items:
+      - 6 32
+  seeds:
+    delay: 10 
+    items:
+      - 295 32
+  bonemeal:
+    delay: 10 
+    items:
+      - 351:15 64
+  shears:
+    delay: 10 
+    items:
+      - 359 1
+  torch:
+    delay: 10 
+    items:
+      - 50 64
+  saddle:
+    delay: 10 
+    items:
+      - 329 32
+  fishingrod:
+    delay: 10 
+    items:
+      - 346 1
+  bucket:
+    delay: 10
+    items:
+      - 325 2  
+  hoe:
+    delay: 10 
+    items:
+      - 293 1
+  clock:
+    delay: 10 
+    items:
+      - 347 1
+  map:
+    delay: 10 
+    items:
+      - 358 1
+  snowball:
+    delay: 10 
+    items:
+      - 332 64
+  bow:
+    delay: 10 
+    items:
+      - 261 1
+  arrow:
+    delay: 10 
+    items:
+      - 262 128
+  sword:
+    delay: 10 
+    items:
+      - 276 1
+  armleather:
+    delay: 10 
+    items: 
+      - 301 1
+      - 300 1
+      - 299 1
+      - 298 1
+  armiron:
+    delay: 10
+    items:
+      - 309 1
+      - 308 1
+      - 307 1
+      - 306 1
+  armgold:
+    delay: 10
+    items: 
+      - 317 1
+      - 316 1
+      - 315 1
+      - 314 1
+  armchain:
+    delay: 10
+    items:
+      - 305 1
+      - 304 1
+      - 303 1
+      - 302 1
+  armdiamond:
+    delay: 10
+    items: 
+      - 313 1
+      - 312 1
+      - 311 1
+      - 310 1
+  boat:
+    delay: 10 
+    items:
+      - 333 4
+  minecart:
+    delay: 10 
+    items:
+      - 328 4
+  powercart:
+    delay: 10 
+    items:
+      - 343 4
+  storagecart:
+    delay: 10 
+    items:
+      - 342 4
+  bed:
+    delay: 10 
+    items:
+      - 355 32
+  irondoor:
+    delay: 10 
+    items:
+      - 330 64
+  wooddoor:
+    delay: 10 
+    items:
+      - 324 64
+  musicdisc1: 
+    delay: 10 
+    items:
+      - 2256 1
+  musicdisc2:
+    delay: 10 
+    items:
+      - 2257 1
+  painting:
+    delay: 10 
+    items:
+      - 321 64
+  sign:
+    delay: 10 
+    items:
+      - 323 64
+  sandstone:
+    delay: 10 
+    items:
+      - 24 128
+  dirt:
+    delay: 10 
+    items:
+      - 3 128
+  mobspawner:
+    delay: 10 
+    items:
+      - 52 32
+  gravel:
+    delay: 10 
+    items:
+      - 13 128
+  clayblock:
+    delay: 10 
+    items:
+      - 82 128
+  obsidian:
+    delay: 10
+    items:
+      - 49 128 
+  cobble:
+    delay: 10 
+    items:
+      - 4 128
+  mossycobble:
+    delay: 10 
+    items:
+      - 48 128
+  ice:
+    delay: 10 
+    items:
+      - 79 64
+  brickblock:
+    delay: 10 
+    items:
+      - 45 128
+  glass:
+    delay: 10 
+    items:
+      - 20 128
+  bookshelf:
+    delay: 10 
+    items:
+      - 47 64
+  wwhite:
+    delay: 10 
+    items:
+      - 35 128
+  wlightgray:
+    delay: 10 
+    items:
+      - 35:8 128
+  wgray:
+    delay: 10 
+    items:
+      - 35:7
+  wblack:
+    delay: 10 
+    items:
+      - 35:15
+  wred:
+    delay: 10 
+    items:
+      - 35:14
+  worange:
+    delay: 10 
+    items:
+      - 35:1
+  wyellow:
+    delay: 10 
+    items:
+      - 35:4
+  wlime:
+    delay: 10 
+    items:
+      - 35:5
+  wgreen:
+    delay: 10 
+    items:
+      - 35:13
+  wcyan:
+    delay: 10 
+    items:
+      - 35:9
+  wlightblue:
+    delay: 10 
+    items:
+      - 35:3
+  wblue:
+    delay: 10 
+    items:
+      - 35:11
+  wpurple:
+    delay: 10 
+    items:
+      - 35:10
+  wmagenta:
+    delay: 10 
+    items:
+      - 35:2
+  wpink:
+    delay: 10 
+    items:
+      - 35:6
+  wbrown:
+    delay: 10 
+    items:
+      - 35:12
+  snowblock:
+    delay: 10 
+    items:
+      - 80 64
+  ironblock:
+    delay: 10 
+    items:
+      - 42 128
+  goldblock:
+    delay: 10 
+    items:
+      - 41 128
+  diamondblock:
+    delay: 10 
+    items:
+      - 57 128
+  lapisblock:
+    delay: 10 
+    items:
+      - 22
+  woodstairs:
+    delay: 10 
+    items:
+      - 53 64
+  stonestairs:
+    delay: 10 
+    items:
+      - 67 64
+  stoneslab:
+    delay: 10 
+    items:
+      - 44 64
+  woodslab:
+    delay: 10 
+    items:
+      - 44:2
+  ladder:
+    delay: 10 
+    items:
+      - 65 64
+  fence:
+    delay: 10 
+    items:
+      - 85 64
+  furnace:
+    delay: 10
+    items:
+      - 61 32
+  pumpkin:
+    delay: 10 
+    items:
+      - 86 64
+  jukebox:
+    delay: 10 
+    items:
+      - 84 32
+  tnt:
+    delay: 10 
+    items:
+      - 46 32
+  powerrail:
+    delay: 10 
+    items:
+      - 27 64
+  detectrail:
+    delay: 10 
+    items:
+      - 28 64
+  lever:
+    delay: 10 
+    items:
+      - 69 64
+  woodplate:
+    delay: 10 
+    items:
+      - 72 32
+  stoneplate:
+    delay: 10 
+    items:
+      - 70 32
+  button:
+    delay: 10 
+    items:
+      - 77 32
+  trapdoor:
+    delay: 10 
+    items:
+      - 96 32
+  dispenser:
+    delay: 10 
+    items:
+      - 23 64
+  noteblock:
+    delay: 10 
+    items:
+      - 25 64
+  piston:
+    delay: 10 
+    items:
+      - 33 64
+  stickypiston:
+    delay: 10 
+    items:
+      - 29 64
+  wood:
+    delay: 10 
+    items:
+      - 17 128
+  leaves:
+    delay: 10 
+    items:
+      - 18 64
+  cactus:
+    delay: 10 
+    items:
+      - 81 64
+  coalore:
+    delay: 10 
+    items:
+      - 16 128
+  ironore:
+    delay: 10 
+    items:
+      - 15 128
+  goldore:
+    delay: 10 
+    items:
+      - 14 128
+  diamondore:
+    delay: 10 
+    items:
+      - 56 128
+  rdsore:
+    delay: 10 
+    items:
+      - 14 128
+  lapisore:
+    delay: 10 
+    items:
+      - 21 128
+  portal:
+    delay: 10 
+    items:
+      - 90 4
+  glowstone:
+    delay: 10 
+    items:
+      - 89 128
+  netherrack:
+    delay: 10 
+    items:
+      - 87 64
+  soulsand:
+    delay: 10 
+    items:
+      - 88 64
+  doop:
+    delay: 0
+    items:
+      - 304 1
+  arch:
+    delay: 10
+    item:
+      - 45 64
+      - 53 64
+      - 67 64
+      - 85 64
+      - 320 64
+      - 324 5
+      - 330 5
+      - 65 64
+      - 20 64
+  elec:
+    delay: 10
+    item:
+      - 331 64
+      - 356 64
+      - 76 64
+      - 69 10
+      - 77 10
+      - 29 64
+      - 33 64
+      - 1 64
+
+# Essentials Sign Control
+# See http://ess.khhq.net/wiki/Sign_Tutorial for instructions on how to use these.
+# To enable signs, remove # symbol. To disable all signs, comment/remove each sign.
+# Essentials Colored sign support will be enabled when any sign types are enabled.
+# We recommend not enabling chest protection signs if you don't intend to use them, (or are using LWC/Lockette).
+ 
+enabledSigns:
+  - color
+  #- balance
+  #- buy  
+  #- sell
+  #- trade
+  #- free
+  #- disposal
+  - warp
+  - kit
+  #- mail
+  #- enchant
+  - gamemode
+  - heal
+  #- spawnmob
+  - time
+  - weather
+  #- protection
+
+# Backup runs a command while saving is disabled
+backup:
+  # Interval in minutes
+  interval: 60
+  # Add a command that backups your data, e.g.
+  # command: 'rdiff-backup World1 backups/World1'
+
+# Set this true to enable permission per warp.
+per-warp-permission: false
+
+# Sort output of /list command by groups
+sort-list-by-groups: true
+
+# More output to the console
+debug: false
+
+# Set the locale for all messages
+# If you don't set this, the default locale of the server will be used.
+#locale: de_DE
+
+############################################################
+# +------------------------------------------------------+ #
+# |                   EssentialsHome                     | #
+# +------------------------------------------------------+ #
+############################################################
+
+# When users die, should they respawn at their homes, instead of the spawnpoint?
+respawn-at-home: true
+
+# When a user interacts with a bed, should their home be set to that location?
+# If you enable this and remove default user access to the /sethome command, you can make beds the only way for players to set their home location.
+bed-sethome: false
+
+#if no home is set send you to spawn when /home is used
+spawn-if-no-home: false
+
+
+############################################################
+# +------------------------------------------------------+ #
+# |                   EssentialsEco                      | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Defines the balance with which new players begin.  Defaults to 0.
+starting-balance: 500
+
+# worth-# defines the value of an item when it is sold to the server via /sell.
+# These are now defined in worth.yml
+
+# Defines the cost to use the given commands PER USE
+command-costs:
+  # /example costs $1000 PER USE
+  #example: 1000
+  # /kit tools costs $1500 PER USE
+  #kit-tools: 1500
+ 
+# Set this to a currency symbol you want to use.
+currency-symbol: '$'
+
+############################################################
+# +------------------------------------------------------+ #
+# |                   EssentialsHelp                     | #
+# +------------------------------------------------------+ #
+############################################################
+
+#Show other plugins commands in help
+non-ess-in-help: true
+
+############################################################
+# +------------------------------------------------------+ #
+# |                   EssentialsChat                     | #
+# +------------------------------------------------------+ #
+############################################################
+
+# If EssentialsChat is installed, this will define how far a player's voice travels, in blocks.  Set to 0 to make all chat global.
+# Note that users with the "essentials.chat.spy" permission will hear everything, regardless of this setting.
+# Users with essentials.chat.shout can override this by prefixing text with an exclamation mark (!)
+# Or with essentials.chat.question can override this by prefixing text with a question mark (?)
+chat:
+  radius: 0
+  
+  # If set to the default chat format which "should" be compatible with ichat.
+  format: '{DISPLAYNAME} {MESSAGE}'
+  #format: '&7[{GROUP}]&f {DISPLAYNAME}&7:&f {MESSAGE}'
+  
+  # You can also have group-specific formats, uncomment to enable:
+  group-formats:
+  #  Default: '{WORLDNAME} {DISPLAYNAME}&7:&f {MESSAGE}'
+  #  Admins: '{WORLDNAME} &c[{GROUP}]&f {DISPLAYNAME}&7:&c {MESSAGE}'
+
+
+
+
+
+############################################################
+# +------------------------------------------------------+ #
+# |                 EssentialsProtect                    | #
+# +------------------------------------------------------+ #
+############################################################
+
+protect:
+  # Database settings for sign/rail protection
+  # get mysql.jar and sqlite and place it in your serverroot/lib directory from here:
+  # http://java.net/projects/essentials/sources/svn/show/lib?rev=435
+
+  # mysql, sqlite or none
+  datatype: 'sqlite'
+
+  # If you specified MySQL above, you MUST enter the appropriate details here.
+  # If you specified SQLite above, these will be IGNORED.
+  username: 'root'
+  password: 'root'
+  mysqlDb: 'jdbc:mysql://localhost:3306/minecraft'
+
+  # For which block types would you like to be alerted?
+  # You can find a list of IDs in plugins/Essentials/items.csv after loading Essentials for the first time.
+  alert:
+    # 10: lava
+    # 11: still lava
+    # 46: TNT
+    on-placement: 10,11,46
+    on-use: 
+    # 46: TNT
+    on-break: 46
+
+  # Users cannot PLACE these types of blocks/items.
+  # < 255 designates a BLOCK
+  # > 255 designates an ITEM (Some blocks can be placed as blocks OR items; lava blocks can be placed by lava buckets, for example.)
+  blacklist:
+    placement: 
+    usage: 
+    
+    #prevent people from breaking blocks
+    #break: 20,50
+    break:
+
+
+  # General physics/behavior modifications
+  prevent:
+    lava-flow: false
+    water-flow: false
+    water-bucket-flow: false
+    fire-spread: true
+    lava-fire-spread: true
+    flint-fire: false
+    lightning-fire-spread: false
+    portal-creation: false
+    tnt-explosion: false
+    creeper-explosion: false
+    creeper-playerdamage: false
+    creeper-blockdamage: false
+    # Monsters won't follow players
+    # permission essentials.protect.entitytarget.bypass disables this
+    entitytarget: false
+    # Prevent the spawning of creatures
+    spawn:
+      chicken: false
+      cow: false
+      creeper: false
+      ghast: false
+      giant: false
+      monster: false
+      pig: false
+      pig_zombie: false
+      sheep: false
+      skeleton: false
+      slime: false
+      spider: false
+      squid: false
+      zombie: false
+      wolf: false
+  
+  # Maximum height the creeper should explode. -1 allows them to explode everywhere.
+  # Set prevent.creeper-explosion to true, if you want to disable creeper explosions.
+  creeper:
+    max-height: -1
+  
+  # Protect various blocks.
+  protect:
+    # Protect all signs
+    signs: true
+
+    # Prevent users from destroying rails
+    rails: true
+
+    # Blocks below rails/signs are also protected if the respective rail/sign is protected.
+    # This makes it more difficult to circumvent protection, and should be enabled.
+    # This only has an effect if "rails" or "signs" is also enabled.
+    block-below: true
+
+   # Prevent placing blocks above protected rails, this is to stop a potential griefing
+    prevent-block-on-rails: false
+
+  # Disable various default physics and behaviors
+  disable:
+    # Should fall damage be disabled?
+    fall: false
+
+    # Users with the essentials.protect.pvp permission will still be able to attack each other if this is set to true.
+    # They will be unable to attack users without that same permission node.
+    pvp: false
+
+    # Should drowning damage be disabled?
+    # (Split into two behaviors; generally, you want both set to the same value)
+    drown: false
+    suffocate: false
+
+    # Should damage via lava be disabled?  Items that fall into lava will still burn to a crisp. ;)
+    lavadmg: false
+
+    # Should arrow damage be disabled
+    projectiles: false
+
+    # This will disable damage from touching cacti.
+    contactdmg: false
+
+    # Burn, baby, burn!  Should fire damage be disabled?
+    firedmg: false
+    
+    # Should the damage after hit by a lightning be disabled?
+    lightning: false
+
+    # Should people with build: false in permissions be allowed to build
+    # Set true to disable building for those people
+    build: true
+
+    #Should we tell people they are not allowed to build
+    warn-on-build-disallow: false
+
+
+    #disable weather options
+    weather:
+      storm: false
+      thunder: false
+      lightning: false
+
+############################################################
+# +------------------------------------------------------+ #
+# |                    New Players                       | #
+# +------------------------------------------------------+ #
+############################################################
+
+newbies:
+  # Should we announce to the server when someone logs in for the first time?
+  # If so, use this format, replacing {DISPLAYNAME} with the player name.
+  # If not, set to ''
+  #announce-format: ''
+  announce-format: '&dWelcome {DISPLAYNAME} to the server!'
+  
+  # When we spawn for the first time, which spawnpoint do we use?
+  spawnpoint: newbies
+
+# End of File <-- No seriously, you're done with configuration.
