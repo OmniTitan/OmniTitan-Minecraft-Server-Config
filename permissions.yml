@@ -4,7 +4,7 @@ groups:
     prefix: '&f[&5Member&f]&f'
     default: true
     options:
-      rank: '100'
+      rank: '500'
     permissions:
     
 # World Acess Perms
@@ -67,6 +67,10 @@ groups:
     - worldguard.region.teleport.own.*
     - worldguard.region.teleport.member.*
     
+# Warp Perms
+    - mywarp.warp.basic.warp
+    - mywarp.warp.basic.list
+    
 #**************
 #****Break*****
 #***Citizen****
@@ -78,7 +82,7 @@ groups:
     - Member
     default: false
     options:
-      rank: '200'
+      rank: '400'
     permissions:
     
 # World Access Perms
@@ -113,6 +117,10 @@ groups:
     - essentials.realname
     - essentials.seen
     - essentials.seen.banreason
+    
+# Warp Perms
+    - mywarp.warp.basic.*
+    - mywarp.warp.soc.*
     
 #**************
 #****Break*****
@@ -214,8 +222,9 @@ groups:
     - Mod
     default: false
     options:
-      rank: '400'
+      rank: '200'
     permissions:
+    - hawkeye.*
     
 # Essentials Perms
     - essentials.gamemode
@@ -278,6 +287,9 @@ groups:
     - worldguard.region.setpriority.*
     - worldguard.region.setparent.*
     - worldguard.region.remove.*
+    
+# Warp Perms
+    - mywarp.admin
         
 #**************
 #****Break*****
@@ -286,29 +298,64 @@ groups:
     
   Manager:
     prefix: '&f[&4Manager&f]&f'
-    inheritence:
+    inheritance:
+    - Admin
+    default: false
+    options:
+      rank: '100'
+    permissions:
+    - hawkeye.*
+    - essentials.*
+    
+# NoCheat+ Perms
+    - nocheatplus.checks.chat.nopwnage
+
+#**************
+#****Break*****
+#***Extras****
+#**************
+#**************
+#****Break*****
+#***Architect**
+#**************
+
+  Architect:
+    prefix: '&f[&4Architect&f]&f'
+    inheritance:
     - Admin
     default: false
     options:
       rank: '500'
     permisssions:
-    - essentials.*
-    - essentials.ban.offline
-    - essentials.banip
-    - essentials.kickall
-    - essentials.socialspy
-    - essentials.sudo
-    - essentials.delhome.others
-    - essentials.tpohere
-    - essentials.joinfullserver
-    - worldguard.region.bypass.*
-    - hawkeye.*
-    - '*'
     
-# NoCheat+ Perms
-    - nocheatplus.checks.chat.nopwnage
->>>>>>> NoCheat+ Added, WE perms chosen.
+#**************
+#****Break*****
+#*Electrician**
+#**************
 
+  Architect:
+    prefix: '&f[&4Architect&f]&f'
+    inheritance:
+    - Admin
+    default: false
+    options:
+      rank: '500'
+    permisssions:
+
+#**************
+#****Break*****
+#****
+#**************
+
+  Architect:
+    prefix: '&f[&4Architect&f]&f'
+    inheritance:
+    - Admin
+    default: false
+    options:
+      rank: '500'
+    permisssions:
+    
 #**************
 #****Break*****
 #***Donators***
@@ -429,7 +476,7 @@ groups:
     - DonatorBaseLv1
     default: false
     options:
-      rank: '225'
+      rank: '425'
     permissions:
   DCit-Lv2:
     prefix: '&f[&c$$&f][&bCitizen&f]&b'
@@ -438,7 +485,7 @@ groups:
     - DonatorBaseLv2
     default: false
     options:
-      rank: '250'
+      rank: '450'
     permissions:
  
 #**************
@@ -479,7 +526,7 @@ groups:
     - DonatorBaseLv1
     default: false
     options:
-      rank: '425'
+      rank: '225'
     permissions:
   DAdmin-Lv2:
     prefix: '&f[&c$$&f][&2Admin&f]&2'
@@ -488,7 +535,7 @@ groups:
     - DonatorBaseLv2
     default: false
     options:
-      rank: '450'
+      rank: '250'
     permissions:
     
 
@@ -506,7 +553,7 @@ groups:
     - DonatorBaseLv2
     default: false
     options:
-      rank: '525'
+      rank: '125'
     permissions:
 
 #**************
