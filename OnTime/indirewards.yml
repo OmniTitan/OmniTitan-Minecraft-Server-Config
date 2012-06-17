@@ -1,0 +1,9 @@
+# OnTime Individual (Indi) Configuration File
+# File Version 1
+# Last Default YML Update: May 20, 2012
+# Author: Edge209
+
+#Version of this config file DO NOT CHANGE THIS
+indiRewardVersion: 1
+#
+indirewards:

@@ -1,0 +1,208 @@
+# OnTime Output Configuration File
+# File Version 2
+# Last Default YML Update: Apr 24, 2012
+# Author: Edge209
+
+#Version of this config file DO NOT CHANGE THIS
+outputVersion: 2
+# Output Configuration Syntax Rules
+# *** BE CAREFUL *** since this is a yml file the format is very important.  NEVER use TABs to create space, always use 'spaces'
+#
+# Every output string must be contained within single quote marks (')
+# Color codes can be used, but codes must begin with "&" and must followed by a space (' ')  e.g. '&a ' for green text
+# The number of lines output must be specified (lines: #), or set to zero if no output should be generated.
+# Each line must be labeled with 'line-#:' where # is the line order, and # should begin with 1
+# "Variables" must be enclosed in "[ ]" and must be proceeded and followed by a space (' ').
+#
+# The following 'variable' codes are supported in the output:
+#
+# [afk] - Player's Away from Keyboard (AFK) status. ("(AFK)" shown when AFK, otherwise nothing is displayed.)
+# [afktime] - How long a player has been AFK for the current login session
+# [current] - Player's OnTime for current session (login)
+# [day-week] - Player's daily or weekly OnTime 
+# [daysAgo] - Number of calendar days since player's first login to the server
+# [daysOn] - The number of different days the player has been on the server
+# [lastLogin] - Day/Time stamp of the player's last login
+# [player] - Player's in-game name
+# [quantity] - Reward quantity value.  Only used for 'item' and 'xp' rewards
+# [reward] - Reward to be issued.  (This holds the quantity for 'econ' rewards) 
+# [rewardString]** - A default set of reward strings which combine things such as quantity and reward names.
+# [rewardType] - Type of reward: Auto vs Individual if Individual Ontime/Real/Delta/Login is also specified
+# [timeToReward] - The amount of in-game time until a players next reward is issued
+# [total] - Player's total OnTime
+# [$] - econ system's unit name (e.g. 'coins', 'dollars', 'credits')
+#
+#  ** There is special handling for '[rewardString]'.  This was designed to be used in the 'ontime' (self) and 'ontime <playername.' (other) commands.
+#      Because it is possible to use the 'ontime rewards set' command a player can have more than one scheduled reward.  When '[rewardString]' is used
+#      the plugin will generate multiple lines of the same format, one for each of the scheduled rewards for that player.  Any variable used
+#      on the same line will also be used in each of the reward output lines.
+#
+# Color Codes
+#  &0	Black
+#  &1	Dark Blue
+#  &2	Dark Green
+#  &3	Dark Aqua
+#  &4	Dark Red
+#  &5	Dark Purple
+#  &6	Gold
+#  &7	Gray
+#  &8	Dark Gray
+#  &9	Blue
+#  &a	Green
+#  &b	Aqua
+#  &c	Red
+#  &d 	Light Purple
+#  &e	Yellow
+#  &f	White
+
+
+output:
+#
+# Output for reward issue events
+#
+   reward:
+      item:
+        lines: 3
+        line-1: '&a Congratulations [player] !'
+        line-2: '&a You have been on for [total]'
+        line-3: '&a You have been rewarded ( [quantity] ) [reward]'
+      inventoryFull:
+        lines: 2
+        line-1: '&a You have a reward of ( [quantity] ) [reward] waiting.'
+        line-2: '&a Please make room in your inventory.'
+      econ:
+        lines: 3
+        line-1: '&a Congratulations [player] !'
+        line-2: '&a You have been on for [total]'
+        line-3: '&a You have been rewarded [reward] [$]'
+      permission:
+        lines: 4
+        line-1: '&a Congratulations [player] !'
+        line-2: '&a You have been on for [total]'
+        line-3: '&a You have been granted the following permission [reward]'
+        line-4: '&a It will take effect on your next login.'
+      group:
+        lines: 3
+        line-1: '&a Congratulations [player] !'
+        line-2: '&a You have been on for [total]'
+        line-3: '&a You have been auto-promoted to group [reward]'
+      command:
+        lines: 0
+      xp:
+        lines: 3
+        line-1: '&a Congratulations [player] !'
+        line-2: '&a You have been on for [total]'
+        line-3: '&a You have been rewarded [quantity] XP!'
+
+#
+# Output for the '/ontime' command
+#
+   ontime-me:
+      daily:
+        lines: 3
+        line-1: 'Current login time = [current]'
+        line-2: 'Today total time = [day-week]'
+        line-3: 'Lifetime server time = [total]'
+      weekly:
+        lines: 3
+        line-1: 'Current login time = [current]'
+        line-2: 'This week total time = [day-week]'
+        line-3: 'Lifetime server time = [total]'     
+      monthly:
+        lines: 3
+        line-1: 'Current login time = [current]'
+        line-2: 'This month total time = [day-week]'
+        line-3: 'Lifetime server time = [total]'     
+ #
+ # Output for the '/ontime <player>' command
+ #    
+   ontime-other:
+      daily:
+        lines: 8
+        line-1: '[player] : Joined the server [daysAgo] days ago.'
+        line-2: '[player] : Has been on [daysOn] different days.'
+        line-3: '[player] : Last login on [lastLogin]'
+        line-4: '[player] : This login= [current] &c [afk]'
+        line-5: '[player] : AFK time this login= [afktime]'
+        line-6: '[player] : Today= [day-week]'
+        line-7: '[player] : Total Time= [total]'
+        line-8: '[player] : Reward: ( [rewardType] ) [rewardString] in [timeToReward]'
+      weekly:
+        lines: 8
+        line-1: '[player] : Joined the server [daysAgo] days ago.'
+        line-2: '[player] : Has been on [daysOn] different days.'
+        line-3: '[player] : Last login on [lastLogin]'
+        line-4: '[player] : This login= [current] &c [afk]'
+        line-5: '[player] : AFK time this login= [afktime]'
+        line-6: '[player] : This Week= [day-week]'
+        line-7: '[player] : Total Time= [total]'
+        line-8: '[player] : Reward: ( [rewardType] ) [rewardString] in [timeToReward]'
+      monthly:
+        lines: 8
+        line-1: '[player] : Joined the server [daysAgo] days ago.'
+        line-2: '[player] : Has been on [daysOn] different days.'
+        line-3: '[player] : Last login on [lastLogin]'
+        line-4: '[player] : This login= [current] &c [afk]'
+        line-5: '[player] : AFK time this login= [afktime]'
+        line-6: '[player] : This Month= [day-week]'
+        line-7: '[player] : Total Time= [total]'
+        line-8: '[player] : Reward: ( [rewardType] ) [rewardString] in [timeToReward]'
+
+#
+# output used when there is missing data
+#
+   error:
+        errorColor: '&c'
+        noDaysAgo: 'No record'
+        noDaysOn: 'No record'
+        noLastLogin: 'No record'
+        notOnline: 'Not Online'
+        notOnToday: 'Not On Today'
+        notOnWeek: 'Not On This Week'
+        notOnMonth: 'Not On This Month'
+        noTotal: 'No record'
+        noReward: 'No reward set'
+        noRewardQuantity: 'N/A'
+        noRewardTime: 'N/A'
+        notEnabled: 'N/A'
+        noAFKTime: 'N/A'
+        playerAFK: '(on hold)'
+
+#
+# Formats used to output dates and time.  Please reference http://www.java2s.com/Tutorial/Java/0040__Data-Type/SimpleDateFormat.htm
+# for more information and examples
+#
+   dateTimeFormat: '[MM/dd/yyyy hh:mm:ss]'
+
+   dateFormat: '[MM/dd/yyyy]'     
+   
+#
+# Output for headers and colors used in '>ontime top <##> [total/today/week]' commands  
+#
+   topListHeader:
+     lines: 1
+     line-1: '&e -- [serverName] &9 OnTime &e LeaderBoard--'
+   
+   todayListHeader:
+     lines: 1
+     line-1: '&e -- [serverName] &f Daily LeaderBoard &e --'
+     
+   weekListHeader:
+     lines: 2
+     line-1: '&e -- [serverName] &f Weekly LeaderBoard &e --'
+     line-2: '&9 for the week starting [reportDate]'
+     
+   monthListHeader:
+     lines: 2
+     line-1: '&e -- [serverName] &f Monthly LeaderBoard &e --'
+     line-2: '&9 for the month starting [reportDate]'
+     
+     
+   topListTimeColor: '&a' 
+   topListNameColor: '&f'
+   topListExtrasColor: '&a'
+     
+#
+# The End
+#
+ 

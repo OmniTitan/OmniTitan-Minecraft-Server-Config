@@ -1,0 +1,87 @@
+# OnTime Configuration File
+# Last Default YML Update: June 10, 2012
+# Author: Edge209
+
+#Version of this config file DO NOT CHANGE THIS
+configVersion: 5
+
+# The name of your server
+serverName: OmniTitan
+
+# If purge is enabled users will be auto removed from stored file if they don't have enough play time / or have not been on for so long
+purgeEnable: true
+
+# minimum time in minutes someone has to be on for their data to be saved
+purgeTimeMin: 10
+
+# maximum time in days since last login before purge
+purgeLoginDay: 364
+
+# maximum length of 'top x' and 'today' lists
+topListMax: 50
+
+# Enable if data should be saved to disk on scheduled event. Otherwise it will happen on server shutdown only
+autoSaveEnable: true
+
+# If auto file save is enabled above, how frequently (server ticks) should this be done.   (72000 = 1 hour)
+autoSavePeriod: 72000
+
+# Enable if backup versions of data files should be auto-created each day
+autoBackupEnable: true
+
+# If auto backup is enabled above, how many versions should be retained?
+autoBackupVersions: 3
+
+# Set the 'reporting' period.  Valid Values: 'DAILY', 'WEEKLY', 'MONTHLY'
+reportingPeriod: DAILY
+
+# Identify the starting day of each week for WEEKLY reports.  Valid Values: 1-7  where:
+# 1=Sunday; 2=Monday; etc.
+firstDayofWeek: 2
+
+# Identify the starting day of each month for MONTHLY reports. 
+# Just in case you want to start in the middle for some strange reason..... and to help debug problems 
+# Valid Values: 1-31  where: 1=1st; 2=2nd; etc.
+firstDayofMonth: 1
+
+# Enable if DAILY/WEEKLY reports should be auto-generated
+autoReportEnable: true
+
+# Enable if HTML format should be used for Reports (default is .txt)
+reportFormatHTML: true
+
+# Enable if log file should be created.
+logEnable: true
+
+# Detail to be included in OnTime logfile. 1=most detail ; 2=medium ; 3=least detail
+logLevel: 1
+
+# Detail to be shown on console. 1=most detail ;2= medium; 3=least detail
+consoleLogLevel: 3
+
+# Log Levels Include:
+# Level 1 (Level 2 and Level 3 events plus)
+#   Player login event
+#   Player Quit event
+#   Rewards scheduled
+#   Rewards cancelled
+# Level 2 (Level 3 events plus)
+# 	Players purged from records due to low play time
+#   Players purged from records due to long absence
+#   Players not scheduled for reward due to lack of receive permission
+# Level 3 (Level 3 events only)
+#   'set', 'add', and 'remove' commands executed
+#   Rewards Issued
+#   Error Messages
+
+# Enable if OnTime Rewards system to be enabled
+rewardsEnable: true
+
+# Enable if Reward Notification Messages to players should be displayed
+rewardNotifyEnable: true
+
+# Enable if AFK status to be checked, and AFK time NOT counted
+afkCheckEnable: true
+
+# If AFK is enabled, max time (minutes) with no activity before player is considered AFK
+afkTime: 10

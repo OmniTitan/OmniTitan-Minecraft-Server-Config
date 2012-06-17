@@ -6,7 +6,7 @@ groups:
     options:
       rank: '500'
     permissions:
-    
+
 # World Acess Perms
     - multiverse.access.F
     - multiverse.access.world
@@ -14,7 +14,7 @@ groups:
     - essentials.world.F
     - essentials.world.world
     - essentials.world.world_nether
-    
+
 # Essential Command Perms
     - essentials.afk
     - essentials.getpos
@@ -36,26 +36,26 @@ groups:
     - essentials.delhome
     - essentials.sethome
     - essentials.build
-    
+
     # Teleporting Commands
     - essentials.tpa
     - essentials.tpaccept
     - essentials.tpdeny
     - essentials.tptoggle
     - essentials.tpahere
-    
+
 # NoCheat+ Perms
     - nocheatplus.checks.blockplace.fastplace
     - nocheatplus.checks.inventory.drop
     - nocheatplus.checks.inventory.instantbow
     - nocheatplus.checks.moving.blocking
     - nocheatplus.checks.moving.cobweb
-    
-    
+
 # Kit Perms
     - essentials.kit
     - essentials.kit.tools
-    
+    - essentials.kit.stone
+
 # WE & WG Perms
     - worldedit.tool.info
     - worldguard.region.info
@@ -66,7 +66,7 @@ groups:
     - worldguard.region.flag.flags.*
     - worldguard.region.teleport.own.*
     - worldguard.region.teleport.member.*
-    
+
 # Warp Perms
     - mywarp.warp.basic.warp
     - mywarp.warp.basic.list
@@ -84,7 +84,7 @@ groups:
     options:
       rank: '400'
     permissions:
-    
+
 # World Access Perms
     - multiverse.access.skylands
     - multiverse.access.world_the_end
@@ -98,7 +98,7 @@ groups:
     - essentials.mail.send
     - essentials.back
     - essentials.tppos
-    
+
 # Essential Sign Perms
     - essentials.signs.use.disposal
     - essentials.signs.use.free
@@ -108,7 +108,7 @@ groups:
     - essentials.signs.use.warp
     - essentials.signs.use.weather
     - essentials.signs.use.spawnmob
-    
+
 # Chat Perms
     - essentials.msg.color
     - essentials.msg.format
@@ -117,10 +117,45 @@ groups:
     - essentials.realname
     - essentials.seen
     - essentials.seen.banreason
-    
+
 # Warp Perms
     - mywarp.warp.basic.*
     - mywarp.warp.soc.*
+
+# Kit Perms
+    - essentials.kit.sand
+    - essentials.kit.clay
+    - essentials.kit.coal
+    - essentials.kit.gold
+    - essentials.kit.iron
+    - essentials.kit.slimeball
+    - essentials.kit.string
+    - essentials.kit.apple
+    - essentials.kit.wool
+    - essentials.kit.fish
+    - essentials.kit.pork
+    - essentials.kit.milk
+    - essentials.kit.sapling
+    - essentials.kit.seeds
+    - essentials.kit.pumpkin
+    - essentials.kit.armleather
+    - essentials.kit.bed
+    - essentials.kit.log
+    - essentials.kit.cactus
+    - essentials.kit.wooddoor
+    - essentials.kit.sign
+    - essentials.kit.sandstone
+    - essentials.kit.dirt
+    - essentials.kit.gravel
+    - essentials.kit.cobble
+    - essentials.kit.glowstone
+    - essentials.kit.netherrack
+    - essentials.kit.soulsand
+    - essentials.kit.sugercane
+    - essentials.kit.blazerod
+    - essentials.kit.lilypad
+    - essentials.kit.melon
+    - essentials.kit.craftingtable
     
 #**************
 #****Break*****
@@ -135,8 +170,9 @@ groups:
     options:
       rank: '300'
     permissions:
-    
+
 # Essentials Perms
+    - essentials.gamemode
     - essentials.feed
     - essentials.give
     - essentials.heal
@@ -158,7 +194,7 @@ groups:
     - essentials.teleport.cooldown.bypass
     - essentials.teleport.hidden
     - essentials.teleport.timer.bypass
-    
+
 # Essentials Sign Perms
     - essentials.signs.break.disposal
     - essentials.signs.break.heal
@@ -168,17 +204,17 @@ groups:
     - essentials.signs.create.heal
     - essentials.signs.create.mail
     - essentials.signs.create.warp
-    
+
 # NoCheat Perms
     - nocheatplus.checks.moving.runfly
-    
+
 # Chat Perms
     - essentials.chat.color
     - essentials.chat.format
     - essentials.chat.url
     #NoCheat+
     - nocheatplus.checks.chat.color
-    
+
 # WE & WG Perms
     - worldedit.limit
     - worldedit.history.undo
@@ -210,7 +246,7 @@ groups:
     - worldguard.region.flag.regions.*
     - worldguard.region.teleport.*
     - worldguard.notify
-    
+
 #**************
 #****Break*****
 #****Admin*****
@@ -225,9 +261,9 @@ groups:
       rank: '200'
     permissions:
     - hawkeye.*
-    
+    - nocheatplus.checks.moving.runfly
+
 # Essentials Perms
-    - essentials.gamemode
     - essentials.getpos.others
     - essentials.list.hidden
     - essentials.spawner
@@ -243,7 +279,9 @@ groups:
     - essentials.weather
     - essentials.home.others
     - essentials.joinfullserver
-    
+    - essentials.tp.others
+    - essentials.enchant
+
 # Essentials Sign Perms
     - essentials.signs.break.enchant
     - essentials.signs.break.free
@@ -260,7 +298,7 @@ groups:
     - essentials.mute
     - essentials.chat.magic
     - essentials.geoip.show
-    
+
 # WE & WG Perms
     - worldedit.selection.expand
     - worldedit.selection.contract
@@ -287,7 +325,7 @@ groups:
     - worldguard.region.setpriority.*
     - worldguard.region.setparent.*
     - worldguard.region.remove.*
-    
+
 # Warp Perms
     - mywarp.admin
         
@@ -304,9 +342,10 @@ groups:
     options:
       rank: '100'
     permissions:
+    - '*'
     - hawkeye.*
     - essentials.*
-    
+
 # NoCheat+ Perms
     - nocheatplus.checks.chat.nopwnage
 
@@ -314,48 +353,95 @@ groups:
 #****Break*****
 #***Extras****
 #**************
+
+
 #**************
 #****Break*****
 #***Architect**
 #**************
 
   Architect:
-    prefix: '&f[&4Architect&f]&f'
     inheritance:
-    - Admin
+    - Member
     default: false
-    options:
-      rank: '500'
     permisssions:
+    - essentials.kit.brickblock
+    - essentials.kit.glass
+    - essentials.kit.grass
+    - essentials.kit.mossycobble
+    - essentials.kit.woodstairs
+    - essentials.kit.cobblestairs
+    - essentials.kit.stoneslab
+    - essentials.kit.woodslab
+    - essentials.kit.fence
+    - essentials.kit.leaves
+    - essentials.kit.brickstairs
+    - essentials.kit.stonestairs
+    - essentials.kit.netherstairs
+    - essentials.kit.redstonelamp
+    - essentials.kit.arch
+
+# 1.3 ONLY Kits
+#    - essentials.kit.sandstonestairs
+    options:
+      message-format: '&f[&4A&f]%prefix%player%suffix: %message'
     
 #**************
 #****Break*****
 #*Electrician**
 #**************
 
-  Architect:
-    prefix: '&f[&4Architect&f]&f'
+  Electrician:
     inheritance:
-    - Admin
+    - Member
     default: false
-    options:
-      rank: '500'
     permisssions:
+    - essentials.kit.rdsdust
+    - essentials.kit.rdsrepeater
+    - essentials.kit.rdstorch
+    - essentials.kit.lever
+    - essentials.kit.button
+    - essentials.kit.dispenser
+    - essentials.kit.woodplate
+    - essentials.kit.stoneplate
+    - essentials.kit.redstonelamp
+    - essentials.kit.elec
+    options:
+      message-format: '&f[&9E&f]%prefix%player%suffix: %message'
 
 #**************
 #****Break*****
-#****
+#*Electrician**
 #**************
 
-  Architect:
-    prefix: '&f[&4Architect&f]&f'
+  Artist:
     inheritance:
-    - Admin
+    - Member
     default: false
-    options:
-      rank: '500'
     permisssions:
-    
+    - essentials.kit.wlightgray
+    - essentials.kit.wgray
+    - essentials.kit.wblack
+    - essentials.kit.wred
+    - essentials.kit.worange
+    - essentials.kit.wyellow
+    - essentials.kit.wlime
+    - essentials.kit.wgreen
+    - essentials.kit.wcyan
+    - essentials.kit.wlightblue
+    - essentials.kit.wblue
+    - essentials.kit.wpurple
+    - essentials.kit.wmagenta
+    - essentials.kit.wpink
+    - essentials.kit.wbrown
+    - essentials.kit.lapisblock
+    - essentials.kit.jukebox
+    - essentials.kit.noteblock
+    - essentials.kit.redstonelamp
+    options:
+      message-format: '&f[&5P&f]%prefix%player%suffix: %message'
+
+
 #**************
 #****Break*****
 #***Donators***
@@ -368,7 +454,7 @@ groups:
     
 # Reserved Slot Perms
     - essentials.joinfullserver
-    
+
 #Essentials Perms
     - essentials.feed
     - essentials.fly
@@ -380,11 +466,11 @@ groups:
     - essentials.sethome.multiple.5
     - essentials.top
     - essentials.tpaall
-    
+
 # Essentials Sign Perms
     - essentials.signs.use.enchant
     - essentials.signs.break.enchant
-    
+
 # NoCheat+ Perms
     - nocheatplus.checks.moving.runfly
 
@@ -395,7 +481,7 @@ groups:
     - essentials.signs.magic
     # NoCheat+
     - nocheatplus.checks.chat.color
-    
+
 # WE & WG Perms
     - worldedit.superpickaxe
     - worldedit.navigation.unstuck
@@ -404,10 +490,107 @@ groups:
     - worldedit.navigation.ceil
     - worldedit.navigation.thru
     - worldedit.navigation.jumpto
-    - 
 
-    
-    
+# Kit Perms
+    - essentials.kit.glass
+    - essentials.kit.grass
+    - essentials.kit.plank
+    - essentials.kit.bone
+    - essentials.kit.diamond
+    - essentials.kit.feather
+    - essentials.kit.flint
+    - essentials.kit.rdsdust
+    - essentials.kit.rdsrepeater
+    - essentials.kit.rdstorch
+    - essentials.kit.stick
+    - essentials.kit.mossycobble
+    - essentials.kit.wlightgray
+    - essentials.kit.wgray
+    - essentials.kit.wblack
+    - essentials.kit.wred
+    - essentials.kit.worange
+    - essentials.kit.wyellow
+    - essentials.kit.wlime
+    - essentials.kit.wgreen
+    - essentials.kit.wcyan
+    - essentials.kit.wlightblue
+    - essentials.kit.wblue
+    - essentials.kit.wpurple
+    - essentials.kit.wmagenta
+    - essentials.kit.wpink
+    - essentials.kit.wbrown
+    - essentials.kit.bread
+    - essentials.kit.cookedfish
+    - essentials.kit.bacon
+    - essentials.kit.redmushroom
+    - essentials.kit.brownmushroom
+    - essentials.kit.redflower
+    - essentials.kit.ironblock
+    - essentials.kit.goldblock
+    - essentials.kit.lapisblock
+    - essentials.kit.woodstairs
+    - essentials.kit.cobblestairs
+    - essentials.kit.yellowflower
+    - essentials.kit.bonemeal
+    - essentials.kit.torch
+    - essentials.kit.bucket
+    - essentials.kit.hoe
+    - essentials.kit.stoneslab
+    - essentials.kit.woodslab
+    - essentials.kit.ladder
+    - essentials.kit.fence
+    - essentials.kit.furnace
+    - essentials.kit.powerrail
+    - essentials.kit.lever
+    - essentials.kit.woodplate
+    - essentials.kit.stoneplate
+    - essentials.kit.sword
+    - essentials.kit.armiron
+    - essentials.kit.armgold
+    - essentials.kit.boat
+    - essentials.kit.minecart
+    - essentials.kit.button
+    - essentials.kit.trapdoor
+    - essentials.kit.dispenser
+    - essentials.kit.noteblock
+    - essentials.kit.piston
+    - essentials.kit.leaves
+    - essentials.kit.irondoor
+    - essentials.kit.musicdisc1
+    - essentials.kit.musicdisc2
+    - essentials.kit.painting
+    - essentials.kit.clayblock
+    - essentials.kit.obsidian
+    - essentials.kit.plankdark
+    - essentials.kit.plankjungle
+    - essentials.kit.planklight
+    - essentials.kit.saplingpine
+    - essentials.kit.saplingjungle
+    - essentials.kit.saplingbirch
+    - essentials.kit.logdark
+    - essentials.kit.logjungle
+    - essentials.kit.loglight
+    - essentials.kit.suger
+    - essentials.kit.bottle
+    - essentials.kit.compass
+    - essentials.kit.glasspane
+    - essentials.kit.ironbars
+    - essentials.kit.vine
+    - essentials.kit.melonseeds
+    - essentials.kit.pumpkinseeds
+    - essentials.kit.brickstairs
+    - essentials.kit.stonestairs
+    - essentials.kit.netherstairs
+    - essentials.kit.netherfence
+    - essentials.kit.crackedbrick
+    - essentials.kit.couldron
+    - essentials.kit.creepersandstone
+    - essentials.kit.redstonelamp
+    - essentials.kit.book
+
+# 1.3 Kits ONLY
+#    - essentials.kit.sandstonestairs
+
   DonatorBaseLv2:
     inhertance:
     - DonatorBaseLv1
@@ -463,13 +646,52 @@ groups:
     - worldguard.stack.illegitimate
     - worldguard.stack.damaged
 
+# Kit Perms
+    - essentials.kit.brickblock
+    - essentials.kit.bookshelf
+    - essentials.kit.ice
+    - essentials.kit.cake
+    - essentials.kit.cookie
+    - essentials.kit.goldapple
+    - essentials.kit.mushroomstew
+    - essentials.kit.diamondblock
+    - essentials.kit.shears
+    - essentials.kit.saddle
+    - essentials.kit.fishingrod
+    - essentials.kit.clock
+    - essentials.kit.map
+    - essentials.kit.jukebox
+    - essentials.kit.detectrail
+    - essentials.kit.bow
+    - essentials.kit.arrow
+    - essentials.kit.armchain
+    - essentials.kit.armdiamond
+    - essentials.kit.powercart
+    - essentials.kit.storagecart
+    - essentials.kit.stickypiston
+    - essentials.kit.jackolantern
+    - essentials.kit.sponge
+    - essentials.kit.mycelium
+    - essentials.kit.mossybrick
+    - essentials.kit.circlestone
+    - essentials.kit.brewingstand
+    - essentials.kit.smoothsandstone
+    - essentials.kit.endstone
+    - essentials.kit.
+
+# Kits for 1.3 ONLY
+#    - essentials.kit.tripwire
+#    - essentials.kit.enderchest
+#    - essentials.kit.bookandquill
+    
+
 #**************
 #****Break*****
 #***Donators***
 #***Citizen****
 #**************
 
-  DCit-Lv1:
+  $Citizen$:
     prefix: '&f[&c$&f][&bCitizen&f]&b'
     inheritance:
     - Citizen
@@ -478,7 +700,7 @@ groups:
     options:
       rank: '425'
     permissions:
-  DCit-Lv2:
+  $$Citizen$$:
     prefix: '&f[&c$$&f][&bCitizen&f]&b'
     inheritance:
     - Citizen
@@ -494,7 +716,7 @@ groups:
 #*****Mod******
 #**************
     
-  DMod-Lv1:
+  $Mod$:
     prefix: '&f[&c$&f][&9Mod&f]&9'
     inheritance:
     - Mod
@@ -503,7 +725,7 @@ groups:
     options:
       rank: '325'
     permissions:
-  DMod-Lv2:
+  $$Mod$$:
     prefix: '&f[&c$$&f][&9Mod&f]&9'
     inheritance:
     - Mod
@@ -519,7 +741,7 @@ groups:
 #****Admin*****
 #**************
 
-  DAdmin-Lv1:
+  $Admin$:
     prefix: '&f[&c$&f][&2Admin&f]&2'
     inheritance:
     - Admin
@@ -528,7 +750,7 @@ groups:
     options:
       rank: '225'
     permissions:
-  DAdmin-Lv2:
+  $$Admin$$:
     prefix: '&f[&c$$&f][&2Admin&f]&2'
     inheritance:
     - Admin
@@ -545,7 +767,7 @@ groups:
 #***Manager*****
 #**************
 
-  DMan-Lv1:
+  $$Manager$$:
     prefix: '&f[&c$$&f][&4Manager&f]&4'
     inheritance:
     - Manager

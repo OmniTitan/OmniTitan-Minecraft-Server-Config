@@ -101,9 +101,11 @@ motd:
 
 # The server rules, available by typing /rules
 rules:
-  - '[1] Be respectful'
-  - '[2] Be ethical'
-  - '[3] Use common sense'
+  - '[1] Do not Grief.'
+  - '[2] Do not Spam.'
+  - '[3] Do not Badger Staff without good reason.'
+  - '[4] Do not Steal from other players'
+  - 'Keep a straight head and report ANY problems to a member of staff.'
   
 # When a command conflicts with another plugin, by default, Essentials will try to force the OTHER plugin to take
 # priority.  If a command is in this list, Essentials will try to give ITSELF priority.  This does not always work:
@@ -192,6 +194,18 @@ kits:
     delay: 10
     items:
       - 05 128
+  plankDark:
+    delay: 10
+    items:
+      - 05:1 128
+  plankJungle:
+    delay: 10
+    items:
+      - 05:3 128
+  plankLight:
+    delay: 10
+    items:
+      - 05:2 128
   bedrock:
     delay: 10
     items:
@@ -292,7 +306,7 @@ kits:
     delay: 10 
     items:
       - 319 4
-  cookedpork:
+  bacon:
     delay: 10 
     items:
       - 320 4
@@ -332,6 +346,18 @@ kits:
     delay: 10 
     items:
       - 6 32
+  saplingpine:
+    delay: 10 
+    items:
+      - 6:1 32
+  saplingjungle:
+    delay: 10 
+    items:
+      - 6:3 32
+  saplingbirch:
+    delay: 10 
+    items:
+      - 6:2 32
   seeds:
     delay: 10 
     items:
@@ -503,19 +529,11 @@ kits:
     delay: 10 
     items:
       - 79 64
-  brickblock:
-    delay: 10 
-    items:
-      - 45 128
-  glass:
-    delay: 10 
-    items:
-      - 20 128
   bookshelf:
     delay: 10 
     items:
       - 47 64
-  wwhite:
+  wool:
     delay: 10 
     items:
       - 35 128
@@ -526,59 +544,59 @@ kits:
   wgray:
     delay: 10 
     items:
-      - 35:7
+      - 35:7 128
   wblack:
     delay: 10 
     items:
-      - 35:15
+      - 35:15 128
   wred:
     delay: 10 
     items:
-      - 35:14
+      - 35:14 128
   worange:
     delay: 10 
     items:
-      - 35:1
+      - 35:1 128
   wyellow:
     delay: 10 
     items:
-      - 35:4
+      - 35:4 128
   wlime:
     delay: 10 
     items:
-      - 35:5
+      - 35:5 128
   wgreen:
     delay: 10 
     items:
-      - 35:13
+      - 35:13 128
   wcyan:
     delay: 10 
     items:
-      - 35:9
+      - 35:9 128
   wlightblue:
     delay: 10 
     items:
-      - 35:3
+      - 35:3 128
   wblue:
     delay: 10 
     items:
-      - 35:11
+      - 35:11 128
   wpurple:
     delay: 10 
     items:
-      - 35:10
+      - 35:10 128
   wmagenta:
     delay: 10 
     items:
-      - 35:2
+      - 35:2 128
   wpink:
     delay: 10 
     items:
-      - 35:6
+      - 35:6 128
   wbrown:
     delay: 10 
     items:
-      - 35:12
+      - 35:12 128
   snowblock:
     delay: 10 
     items:
@@ -603,7 +621,7 @@ kits:
     delay: 10 
     items:
       - 53 64
-  stonestairs:
+  cobblestairs:
     delay: 10 
     items:
       - 67 64
@@ -683,7 +701,19 @@ kits:
     delay: 10 
     items:
       - 29 64
-  wood:
+  log:
+    delay: 10 
+    items:
+      - 17 128
+  logdark:
+    delay: 10 
+    items:
+      - 17 128
+  logjungle:
+    delay: 10 
+    items:
+      - 17 128
+  loglight:
     delay: 10 
     items:
       - 17 128
@@ -762,6 +792,154 @@ kits:
       - 29 64
       - 33 64
       - 1 64
+  enchantingtable:
+    delay: 10
+    item:
+      - 
+  suger:
+    delay: 10
+    item:
+      - 353 64
+  sugercane:
+    delay: 10
+    item:
+      - 338 64
+  blazerod:
+    delay: 10
+    item:
+      - 369 32
+  bottle:
+    delay: 10
+    item:
+      - 374 1
+  compass:
+    delay: 10
+    item:
+      - 345 1
+  glasspane:
+    delay: 10
+    item:
+      - 102 64
+  ironbars:
+    delay: 10
+    item:
+      - 101 64
+  vine:
+    delay: 10
+    item:
+      - 106 64
+  lilypad:
+    delay: 10
+    item:
+      - 111 32
+  melon:
+    delay: 10
+    item:
+      - 103 10
+  melonseeds:
+    delay: 10
+    item:
+      - 362 32
+  pumpkinseeds:
+    delay:
+    item:
+      - 361 32
+  jackolantern:
+    delay:
+    item:
+      - 91 32
+  sponge:
+    delay: 10
+    item:
+      - 19 32
+  brickstairs:
+    delay: 10
+    item:
+      - 108 64
+  stonestairs:
+    delay: 10
+    item:
+      - 109 64
+  netherstairs:
+    delay:
+    item:
+      - 114 64
+  netherfence:
+    delay: 10
+    item:
+      - 113 64
+  mycelium:
+    delay: 10
+    item:
+      - 110 64
+  craftingtable:
+    delay: 10
+    item:
+      - 58 1
+  mossybrick:
+    delay: 10
+    item:
+      - 98:1 64
+  crackedbrick:
+    delay: 10
+    item:
+      - 98:2 64
+  circlestone:
+    delay: 10
+    item:
+      - 98:3 64
+  couldron:
+    delay: 10
+    item:
+      - 380 1
+  brewingstand:
+    delay: 10
+    item:
+      - 379 1
+  creepersandstone:
+    delay: 10
+    item:
+      - 24:1
+  smoothsandstone:
+    delay: 10
+    item:
+      - 24:2
+  endstone:
+    delay: 10
+    item:
+      - 121 64
+  redstonelamp:
+    delay: 10
+    item:
+      - 123 64
+      
+
+# 1.3 Release Kits DO NOT USE YET
+  sandstonestairs:
+    delay: 10
+    item:
+      - 128 64
+  tripwire:
+    delay: 10
+    item:
+      - 131 10
+  emeraldblock:
+    delay: 10
+    item:
+      - 133 64
+  emerald:
+    delay: 10
+    item:
+      - 388 64
+  enderchest:
+    delay: 10
+    item:
+      - 130 1
+  bookandquill:
+    delay: 10
+    item:
+      - 386 2
+
 
 # Essentials Sign Control
 # See http://ess.khhq.net/wiki/Sign_Tutorial for instructions on how to use these.
@@ -832,7 +1010,7 @@ spawn-if-no-home: false
 ############################################################
 
 # Defines the balance with which new players begin.  Defaults to 0.
-starting-balance: 500
+starting-balance: 0
 
 # worth-# defines the value of an item when it is sold to the server via /sell.
 # These are now defined in worth.yml
@@ -1034,7 +1212,6 @@ newbies:
   # Should we announce to the server when someone logs in for the first time?
   # If so, use this format, replacing {DISPLAYNAME} with the player name.
   # If not, set to ''
-  #announce-format: ''
   announce-format: '&dWelcome {DISPLAYNAME} to the server!'
   
   # When we spawn for the first time, which spawnpoint do we use?
