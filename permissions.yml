@@ -156,7 +156,10 @@ groups:
     - essentials.kit.lilypad
     - essentials.kit.melon
     - essentials.kit.craftingtable
-    
+
+# Extra
+    - mobdisguise.mob.pig
+
 #**************
 #****Break*****
 #*****Mod******
@@ -246,6 +249,9 @@ groups:
     - worldguard.region.flag.regions.*
     - worldguard.region.teleport.*
     - worldguard.notify
+
+# Extra
+    - mobdisguise.mob.chicken
 
 #**************
 #****Break*****
@@ -491,6 +497,20 @@ groups:
     - worldedit.navigation.thru
     - worldedit.navigation.jumpto
 
+# Mob Disguise Perms
+    - mobdisguise.mob.creeper
+    - mobdisguise.mob.skeleton
+    - mobdisguise.mob.spider
+    - mobdisguise.mob.cow
+    - mobdisguise.mob.sheep
+    - mobdisguise.mob.squid
+    - mobdisguise.mob.villager
+    - mobdisguise.mob.cavespider
+    - mobdisguise.mob.slime
+    - mobdisguise.mob.zombie
+    - mobdisguise.mob.snowgolem
+    - mobdisguise.mob.wolf
+
 # Kit Perms
     - essentials.kit.glass
     - essentials.kit.grass
@@ -646,6 +666,19 @@ groups:
     - worldguard.stack.illegitimate
     - worldguard.stack.damaged
 
+# MobDisguise Perms
+    - mobdisguise.mob.mooshroom
+    - mobdisguise.mob.ocelot
+    - mobdisguise.mob.blaze
+    - mobdisguise.mob.ghast
+    - mobdisguise.mob.magmacube
+    - mobdisguise.mob.silverfish
+    - mobdisguise.mob.spiderjockey
+    - mobdisguise.mob.irongolem
+    - mobdisguise.mob.enderman
+    - mobdisguise.mob.zombiepigman
+    - mobdisguise.mob.enderdragon
+    - mobdisguise.mob.giant
 # Kit Perms
     - essentials.kit.brickblock
     - essentials.kit.bookshelf
@@ -1310,6 +1343,9 @@ users:
     group:
     - Citizen
   rooses:
+    group:
+    - Citizen
+  aodhan1:
     group:
     - Citizen
 #done yay second times the charm lol

@@ -84,6 +84,31 @@
 # 'version' below is the version of this YML file. DO NOT CHANGE THIS
 #
 version: 4
+   groups:
+      - Member
+      - Citizen
+      - Architect
+      - Electrician
+      - Artist
+      - Mod
+      - Admin
+      - Manager
+      - $Citizen$
+      - $$Citizen$$
+      - $Mod$
+      - $$Mod$$
+      - $Admin$
+      - $$Admin$$
+      - $$Manager$$
+      - Co-Owner
+      - Owner
+
+	rewards:
+      - S,A,0,6,0,0,0,0,G,1,Citizen,TBD
+      - S,A,365,0,0,0,0,0,G,1,Mod,TBD
+      - S,A,600,0,0,0,0,0,G,1,Admin,TBD
+
+
 #
 #
 # Do no modify the following 
