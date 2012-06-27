@@ -181,7 +181,7 @@ checks:
       actions: log:ieat:2:5:if cancel
   moving:
     runfly:
-      active: true
+      active: false
       allowfastsneaking: true
       allowfastblocking: true
       actions: log:moveshort:3:5:f cancel vl>100 log:moveshort:0:5:if cancel vl>400 log:movelong:0:5:cif cancel
@@ -190,7 +190,7 @@ checks:
         aggressivemode: true
         actions: log:nofall:0:5:cif cancel
       flying:
-        allowflyingalways: false
+        allowflyingalways: true
         allowflyingincreative: true
         flyingspeedlimitvertical: 100
         flyingspeedlimithorizontal: 60
