@@ -90,7 +90,6 @@ groups:
     - multiverse.access.world_the_end
     - essentials.world.world_the_end
     - essentials.world.skylands
-#Change this so all can go on new world
 # Essentials Command Perms
     - essentials.tp
     - essentials.itemdb
@@ -249,7 +248,6 @@ groups:
     - worldguard.region.flag.regions.*
     - worldguard.region.teleport.*
     - worldguard.notify
-#move fixwater,fixlava,drain to admin as and fill large area one of the mods did this b4
 # Extra
     - mobdisguise.mob.chicken
 
@@ -354,7 +352,6 @@ groups:
 
 # NoCheat+ Perms
     - nocheatplus.checks.chat.nopwnage
-#remove this group and add to co owner
 #**************
 #****Break*****
 #***Extras****
@@ -850,8 +847,6 @@ worlds:
 #****Break*****
 #****Users*****
 #**************
-#change all managers to admins plus change all admins and mods to citizens so i can rechoose mods and admins based on how
-#often they come online and skill.
 users:
   shaanie:
     group:
